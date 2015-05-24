@@ -1,0 +1,15 @@
+body {
+  padding-top: 60px;
+}
+
+section {
+  padding-bottom: 10px;
+}
+
+footer {
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+}

@@ -1,25 +1,232 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Welcome!</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <head>
+    <title>MattLewis.me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <div class="container">
-            <br>
-            <div class="jumbotron">
-                <h1>Hello world!</h1>
-                <p>There's not much here right now.</p>
-            </div>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body ng-app="mwl.homepage" ng-controller="HomepageCtrl as vm">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" ng-click="vm.collapseNav = !vm.collapseNav">
+            <i class="fa fa-bars fa-inverse"></i>
+          </button>
+          <a class="navbar-brand" href="/">MattLewis.me</a>
         </div>
-    </body>
+
+        <div class="collapse navbar-collapse" collapse="!vm.collapseNav">
+          <ul class="nav navbar-nav navbar-right">
+            <li du-scrollspy="about" offset="60">
+              <a href="#about" du-smooth-scroll offset="60">
+                <i class="fa fa-info-circle"></i> About me
+              </a>
+            </li>
+            <li du-scrollspy="opensource" offset="60">
+              <a href="#opensource" du-smooth-scroll offset="60">
+                <i class="fa fa-code"></i> Open source
+              </a>
+            </li>
+            <li du-scrollspy="mobileapps" offset="60">
+              <a href="#mobileapps" du-smooth-scroll offset="60">
+                <i class="fa fa-mobile"></i> Mobile apps
+              </a>
+            </li>
+            <li du-scrollspy="contact" offset="60">
+              <a href="#contact" du-smooth-scroll offset="60">
+                <i class="fa fa-envelope-o"></i> Contact me
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="about" class="bg-success">
+      <div class="container">
+        <h2><i class="fa fa-info-circle"></i> About me</h2>
+
+        <p>I am a hard working and self motivated software developer with 7 years experience, 3 of which are commercial.
+          My main area of expertise is the evolving web and everything related to it. My key skills are in JavaScript
+          (AngularJS and Node.JS), PHP, MongoDB and MySQL. I also have a strong interest in deploying and scaling linux
+          servers for high traffic websites. Recently I have started developing hybrid apps for iOS and Android using
+          the Ionic framework.</p>
+      </div>
+    </section>
+    <section id="opensource">
+      <div class="container">
+        <h2><i class="fa fa-code"></i> Open source</h2>
+        <p>I love the open source community and strive to give back in whatever way I can.</p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Angular bootstrap calendar</h3>
+              </div>
+              <div class="panel-body">
+                <p>A pure AngularJS, bootstrap styled calendar widget that can be used to display calendar events on a year, month, week or day view.</p>
+                <div class="text-center">
+                  <iframe src="https://ghbtns.com/github-btn.html?user=mattlewis92&repo=angular-bootstrap-calendar&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+                </div>
+              </div>
+              <div class="panel-footer text-center">
+                <a href="https://github.com/mattlewis92/angular-bootstrap-calendar" target="_blank"
+                   class="btn btn-success">
+                  <i class="fa fa-external-link"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Angular bluebird promises</h3>
+              </div>
+              <div class="panel-body">
+                <p>Replace the default angular $q service with the bluebird promise library for enhanced promises within your angular app!</p>
+                <div class="text-center">
+                  <iframe src="https://ghbtns.com/github-btn.html?user=mattlewis92&repo=angular-bluebird-promises&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+                </div>
+              </div>
+              <div class="panel-footer text-center">
+                <a href="https://github.com/mattlewis92/angular-bluebird-promises" target="_blank"
+                   class="btn btn-success">
+                  <i class="fa fa-external-link"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Angular bootstrap confirm</h3>
+              </div>
+              <div class="panel-body">
+                <p>Displays a highly configurable bootstrap confirmation popover on any element (with no jQuery or bootstrap JS!)</p>
+                <div class="text-center">
+                  <iframe src="https://ghbtns.com/github-btn.html?user=mattlewis92&repo=angular-bootstrap-confirm&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+                </div>
+              </div>
+              <div class="panel-footer text-center">
+                <a href="https://github.com/mattlewis92/angular-bootstrap-confirm" target="_blank"
+                   class="btn btn-success">
+                  <i class="fa fa-external-link"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="mobileapps" class="bg-success">
+      <div class="container">
+        <h2><i class="fa fa-mobile"></i> Mobile apps</h2>
+        <p>A selection of the apps I've built for various employers using the awesome <a href="http://ionicframework.com/" target="_blank" class="text-primary"><strong>Ionic framework</strong></a>.</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">SocialSignIn</h3>
+              </div>
+              <div class="panel-body">
+                <div class="text-center">
+                  <img
+                    src="https://lh4.ggpht.com/xrNmh4UijcqFh92ghcbLghYODaIrHWAMktIZhsPyJk1qyLr85x0ES8ugsoweiyK-I58=w300-rw"
+                    width="100"
+                    class="img-rounded img-thumbnail">
+                </div>
+                <br>
+                <p>The SocialSignIn app allows you to schedule and manage posts for all your social networks as well as view your unified social inbox.</p>
+              </div>
+              <div class="panel-footer text-center">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="https://itunes.apple.com/gb/app/socialsignin/id564011085" target="_blank">
+                      <img src="https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg">
+                    </a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a href="https://play.google.com/store/apps/details?id=uk.co.socialsignin" target="_blank">
+                      <img src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" height="40" width="135">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">MiResource</h3>
+              </div>
+              <div class="panel-body">
+                <div class="text-center">
+                  <img
+                    src="https://lh3.ggpht.com/kwRcGHNSZYKDvh9i4rXoxFufHgFmn5g3FW0SMUkdatHuwuqPPd8vhPMHgF-ojLYJvqs=w300-rw"
+                    width="100"
+                    class="img-rounded img-thumbnail">
+                </div>
+                <br>
+                <p>This is the official app for the Resource Event, taking place on 3-5 March 2015 at ExCel, London.<br><br></p>
+              </div>
+              <div class="panel-footer text-center">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a href="https://itunes.apple.com/us/app/id968397450" target="_blank">
+                      <img src="https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg">
+                    </a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a href="https://play.google.com/store/apps/details?id=com.iwazat.miresource" target="_blank">
+                      <img src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" height="40" width="135">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2><i class="fa fa-envelope-o"></i> Contact me</h2>
+
+        <p>I can be found on all the usual places across the internet.</p>
+
+        <div class="text-center">
+          <a class="btn btn-primary"
+             href="http://www.google.com/recaptcha/mailhide/d?k=01ciEon6qhPUtHkA2796MjHQ==&amp;c=ThGegkQW9KQ7Vs-mCVW7AgfavFhM0A417JovGr-JiHc="
+             onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501ciEon6qhPUtHkA2796MjHQ\75\75\46c\75ThGegkQW9KQ7Vs-mCVW7AgfavFhM0A417JovGr-JiHc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;">
+            <i class="fa fa-3x fa-envelope-o"></i>
+          </a>
+          <a class="btn btn-primary" href="https://github.com/mattlewis92" target="_blank">
+            <i class="fa fa-3x fa-github"></i>
+          </a>
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/mattlewis92" target="_blank">
+            <i class="fa fa-3x fa-linkedin"></i>
+          </a>
+          <a class="btn btn-primary" href="https://twitter.com/mattlewis92_" target="_blank">
+            <i class="fa fa-3x fa-twitter"></i>
+          </a>
+        </div>
+        <br>
+      </div>
+    </section>
+    <footer class="text-center bg-success">
+      Copyright &copy; Matt Lewis {{ vm.currentDate | date:'yyyy' }}
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/0.7.0/angular-scroll.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
