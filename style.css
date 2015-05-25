@@ -10,13 +10,6 @@ footer {
   padding: 20px;
 }
 
-.container {
-  max-width: 900px;
+.navbar i {
+  margin-right: 4px;
 }
-
-@media (max-width: 400px) {
-  .social-buttons .fa {
-    font-size: 24px;
-  }
-}
-
