@@ -318,7 +318,7 @@
             ng-href="https://twitter.com/{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}/status/{{ tweet.retweeted_status.id_str || tweet.id_str }}"
             target="_blank"
             class="list-group-item">
-            <img class="pull-left img-thumbnail" ng-src="{{ tweet.retweeted_status.user.profile_image_url_https || tweet.user.profile_image_url_https }}">
+            <img class="pull-left img-rounded" ng-src="{{ tweet.retweeted_status.user.profile_image_url_https || tweet.user.profile_image_url_https }}">
             <h4 class="list-group-item-heading">
               <small class="pull-right">{{ tweet.created_at | date:'MMM d' }}</small>
               <i class="fa fa-retweet" ng-show="tweet.retweeted_status" tooltip="This was retweeted by Matt"></i>
