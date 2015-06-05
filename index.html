@@ -320,10 +320,12 @@
             class="list-group-item">
             <img class="pull-left" ng-src="{{ tweet.retweeted_status.user.profile_image_url_https || tweet.user.profile_image_url_https }}">
             <h4 class="list-group-item-heading">
+              <small class="pull-right">{{ tweet.created_at | date:'MMM d' }}</small>
               <i class="fa fa-retweet" ng-show="tweet.retweeted_status" tooltip="This was retweeted by Matt"></i>
               {{ tweet.retweeted_status.user.name || tweet.user.name }}
-              <small>@{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}</small>
-              <small class="pull-right">{{ tweet.created_at | date:'MMM d' }}</small>
+              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
+                @{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}
+              </small>
             </h4>
             <p class="list-group-item-text" ng-bind-html="tweet.text | linky:'_blank'"></p>
           </a>

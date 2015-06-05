@@ -17,3 +17,7 @@ footer {
 .list-group img.pull-left {
   margin-right: 15px;
 }
+
+.spacer-top {
+  margin-top: 5px;
+}
