@@ -13,3 +13,7 @@ footer {
 .navbar i {
   margin-right: 4px;
 }
+
+.list-group img.pull-left {
+  margin-right: 15px;
+}

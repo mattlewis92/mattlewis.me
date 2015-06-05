@@ -41,6 +41,16 @@
                 <i class="fa fa-mobile fa-lg"></i> Mobile apps
               </a>
             </li>
+            <li du-scrollspy="contact" offset="60">
+              <a href="#contact" du-smooth-scroll offset="60">
+                <i class="fa fa-pencil-square-o fa-lg"></i> Contact me
+              </a>
+            </li>
+            <li du-scrollspy="tweets" offset="60">
+              <a href="#tweets" du-smooth-scroll offset="60">
+                <i class="fa fa-twitter fa-lg"></i> Tweets
+              </a>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li tooltip="Email me" tooltip-placement="bottom">
@@ -228,14 +238,108 @@
         </div>
       </div>
     </section>
+    <section id="contact" ng-controller="ContactFormCtrl as vm">
+      <div class="container" ng-form name="contactForm">
+        <h2><i class="fa fa-pencil-square-o"></i> Contact me</h2>
+        <div ng-hide="vm.submitted">
+          <alert type="danger" ng-show="vm.error">
+            <i class="fa fa-exclamation-circle"></i>
+            Oops, it looks like something's gone wrong: {{ vm.error.message }}
+          </alert>
+          <div class="row">
+            <div
+              class="col-md-6"
+              ng-class="{'has-error': contactForm.name.$invalid && contactForm.name.$dirty}">
+              <input
+                type="text"
+                name="name"
+                class="form-control input-lg"
+                placeholder="Your name"
+                required
+                ng-model="vm.form.name">
+              <br>
+            </div>
+            <div
+              class="col-md-6"
+              ng-class="{'has-error': contactForm.email.$invalid && contactForm.email.$dirty}">
+              <input
+                type="email"
+                name="email"
+                class="form-control input-lg"
+                placeholder="Your email address"
+                required
+                ng-model="vm.form.email"
+                ng-model-options="{debounce: 500}">
+              <br>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col-md-12"
+              ng-class="{'has-error': contactForm.message.$invalid && contactForm.message.$dirty}">
+            <textarea
+              class="form-control input-lg"
+              name="message"
+              placeholder="Your message"
+              required
+              ng-model="vm.form.message">
+            </textarea>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+              <button
+                type="button"
+                class="btn btn-success btn-block btn-lg"
+                ng-disabled="!contactForm.$valid || vm.loading"
+                ng-click="vm.submit()">
+                <i class="fa fa-spin fa-spinner" ng-show="vm.loading"></i> Send
+              </button>
+            </div>
+          </div>
+          <br>
+        </div>
+        <alert type="info" ng-show="vm.submitted">
+          <i class="fa fa-check"></i> Thanks for contacting me, I'll get back to you as soon as possible.
+        </alert>
+      </div>
+    </section>
+    <section id="tweets" class="bg-success" ng-controller="TweetsCtrl as vm">
+      <div class="container">
+        <h2><i class="fa fa-twitter"></i> Latest Tweets</h2>
+        <alert type="danger" ng-show="!vm.tweets">
+          <i class="fa fa-exclamation-circle"></i>
+          Oops, it looks like something went wrong whilst trying to load the tweets. Why not check out my <a href="https://twitter.com/mattlewis92_" target="_blank">Twitter feed</a> directly?
+        </alert>
+        <div class="list-group">
+          <a
+            ng-repeat="tweet in vm.tweets | limitTo:15 track by tweet.id_str"
+            ng-href="https://twitter.com/{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}/status/{{ tweet.retweeted_status.id_str || tweet.id_str }}"
+            target="_blank"
+            class="list-group-item">
+            <img class="pull-left" ng-src="{{ tweet.retweeted_status.user.profile_image_url_https || tweet.user.profile_image_url_https }}">
+            <h4 class="list-group-item-heading">
+              <i class="fa fa-retweet" ng-show="tweet.retweeted_status" tooltip="This was retweeted by Matt"></i>
+              {{ tweet.retweeted_status.user.name || tweet.user.name }}
+              <small>@{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}</small>
+              <small class="pull-right">{{ tweet.created_at | date:'MMM d' }}</small>
+            </h4>
+            <p class="list-group-item-text" ng-bind-html="tweet.text | linky:'_blank'"></p>
+          </a>
+        </div>
+      </div>
+    </section>
     <footer class="text-center">
-      Powered by <a href="https://pages.github.com/" target="_blank">GitHub pages</a> and <a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a>.
+      Powered by <a href="https://pages.github.com/" target="_blank" class="text-success">GitHub pages</a>, <a href="https://heroku.com/" target="_blank" class="text-success">Heroku</a> and <a href="https://www.cloudflare.com/" target="_blank" class="text-success">Cloudflare</a>.
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/0.7.0/angular-scroll.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
     <script src="script.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
