@@ -18,36 +18,36 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" ng-click="vm.collapseNav = !vm.collapseNav">
+          <button type="button" class="navbar-toggle collapsed" ng-click="vm.isMenuVisible = !vm.isMenuVisible">
             <i class="fa fa-bars fa-inverse"></i>
           </button>
           <a class="navbar-brand" href="/">Matt Lewis</a>
         </div>
 
-        <div class="collapse navbar-collapse" collapse="!vm.collapseNav">
+        <div class="collapse navbar-collapse" collapse="!vm.isMenuVisible">
           <ul class="nav navbar-nav">
             <li du-scrollspy="about" offset="60">
-              <a href="#about" du-smooth-scroll offset="60">
+              <a href="#about" du-smooth-scroll offset="60" ng-click="vm.isMenuVisible = false">
                 <i class="fa fa-info-circle fa-lg"></i> About me
               </a>
             </li>
             <li du-scrollspy="opensource" offset="60">
-              <a href="#opensource" du-smooth-scroll offset="60">
+              <a href="#opensource" du-smooth-scroll offset="60" ng-click="vm.isMenuVisible = false">
                 <i class="fa fa-code fa-lg"></i> Open source
               </a>
             </li>
             <li du-scrollspy="mobileapps" offset="60">
-              <a href="#mobileapps" du-smooth-scroll offset="60">
+              <a href="#mobileapps" du-smooth-scroll offset="60" ng-click="vm.isMenuVisible = false">
                 <i class="fa fa-mobile fa-lg"></i> Mobile apps
               </a>
             </li>
             <li du-scrollspy="contact" offset="60">
-              <a href="#contact" du-smooth-scroll offset="60">
+              <a href="#contact" du-smooth-scroll offset="60" ng-click="vm.isMenuVisible = false">
                 <i class="fa fa-pencil-square-o fa-lg"></i> Contact me
               </a>
             </li>
             <li du-scrollspy="tweets" offset="60">
-              <a href="#tweets" du-smooth-scroll offset="60">
+              <a href="#tweets" du-smooth-scroll offset="60" ng-click="vm.isMenuVisible = false">
                 <i class="fa fa-twitter fa-lg"></i> Tweets
               </a>
             </li>
