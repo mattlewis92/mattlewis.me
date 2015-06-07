@@ -6,7 +6,7 @@
     "url": "git+https://github.com/mattlewis92/mattlewis92.github.io.git"
   },
   "devDependencies": {
-    "gulp": "~3.8.11",
+    "gulp": "~3.9.0",
     "gulp-webserver": "~0.9.1"
   }
 }
