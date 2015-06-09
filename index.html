@@ -311,7 +311,7 @@
     <section id="tweets" class="bg-success" ng-controller="TweetsCtrl as vm">
       <div class="container">
         <h2><i class="fa fa-twitter"></i> Latest Tweets</h2>
-        <alert type="danger" ng-show="!vm.tweets">
+        <alert type="danger" ng-hide="vm.tweets.length > 0">
           <i class="fa fa-exclamation-circle"></i>
           Oops, it looks like something went wrong whilst trying to load the tweets. Why not check out my <a href="https://twitter.com/mattlewis92_" target="_blank">Twitter feed</a> directly?
         </alert>
