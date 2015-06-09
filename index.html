@@ -4,6 +4,11 @@
     <base href="/">
     <title>Matt Lewis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      [ng-cloak] {
+        display: none !important;
+      }
+    </style>
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/flatly/bootstrap.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
@@ -241,7 +246,7 @@
         </div>
       </div>
     </section>
-    <section id="contact" ng-controller="ContactFormCtrl as vm">
+    <section id="contact" ng-controller="ContactFormCtrl as vm" ng-cloak>
       <div class="container" ng-form name="contactForm">
         <h2><i class="fa fa-pencil-square-o"></i> Contact me</h2>
         <div ng-hide="vm.submitted">
@@ -308,14 +313,19 @@
         </alert>
       </div>
     </section>
-    <section id="tweets" class="bg-success" ng-controller="TweetsCtrl as vm">
+    <section id="tweets" class="bg-success" ng-controller="TweetsCtrl as vm" ng-cloak>
       <div class="container">
         <h2><i class="fa fa-twitter"></i> Latest Tweets</h2>
-        <alert type="danger" ng-if="!vm.tweets">
+        <alert type="danger" ng-if="vm.error">
           <i class="fa fa-exclamation-circle"></i>
           Oops, it looks like something went wrong whilst trying to load the tweets. Why not check out my <a href="https://twitter.com/mattlewis92_" target="_blank">Twitter feed</a> directly?
         </alert>
-        <div class="list-group">
+        <div ng-if="vm.loading" class="text-center">
+          <i class="fa fa-spinner fa-spin fa-4x"></i>
+          <h2>Loading...</h2>
+          <br>
+        </div>
+        <div class="list-group" ng-if="vm.tweets.length > 0">
           <a
             ng-repeat="tweet in vm.tweets | limitTo:15 track by tweet.id_str"
             ng-href="https://twitter.com/{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}/status/{{ tweet.retweeted_status.id_str || tweet.id_str }}"

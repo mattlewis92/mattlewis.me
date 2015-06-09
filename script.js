@@ -41,11 +41,16 @@
 
     .controller('TweetsCtrl', function($http, moment, apiEndpoint) {
       var vm = this;
+      vm.loading = true;
       $http.get(apiEndpoint + '/social/tweets').success(function(tweets) {
         vm.tweets = tweets.map(function(tweet) {
           tweet.created_at = moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').toDate();
           return tweet;
         });
+      }).error(function(error) {
+        vm.error = error;
+      }).finally(function() {
+        vm.loading = false;
       });
     });
 
