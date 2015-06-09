@@ -311,7 +311,7 @@
     <section id="tweets" class="bg-success" ng-controller="TweetsCtrl as vm">
       <div class="container">
         <h2><i class="fa fa-twitter"></i> Latest Tweets</h2>
-        <alert type="danger" ng-hide="vm.tweets.length > 0">
+        <alert type="danger" ng-if="!vm.tweets">
           <i class="fa fa-exclamation-circle"></i>
           Oops, it looks like something went wrong whilst trying to load the tweets. Why not check out my <a href="https://twitter.com/mattlewis92_" target="_blank">Twitter feed</a> directly?
         </alert>
@@ -327,14 +327,16 @@
               </div>
               <div class="media-body">
                 <h4 class="list-group-item-heading">
-                  <i class="fa fa-retweet" ng-show="tweet.retweeted_status" tooltip="This was retweeted by Matt"></i>
                   {{ tweet.retweeted_status.user.name || tweet.user.name }}
                   <small class="pull-right">{{ tweet.created_at | date:'MMM d' }}</small>
                   <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
                     @{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}
                   </small>
                 </h4>
-                <p class="list-group-item-text" ng-bind-html="(tweet.retweeted_status.text || tweet.text) | linky:'_blank' | nl2br"></p>
+                <p class="list-group-item-text">
+                  <i class="fa fa-retweet" ng-show="tweet.retweeted_status" tooltip="This was retweeted by Matt"></i>
+                  <span ng-bind-html="(tweet.retweeted_status.text || tweet.text) | linky:'_blank' | nl2br"></span>
+                </p>
               </div>
             </div>
           </a>
