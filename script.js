@@ -14,6 +14,14 @@
 
     .constant('moment', window.moment)
 
+    .filter('nl2br', function() {
+      return function(input) {
+        if (input) {
+          return input.replace(/&#10;/g, '<br>');
+        }
+      };
+    })
+
     .controller('ContactFormCtrl', function($http, apiEndpoint) {
 
       var vm = this;
