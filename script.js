@@ -40,6 +40,7 @@
     })
 
     .controller('TweetsCtrl', function($http, moment, apiEndpoint) {
+
       var vm = this;
       vm.loading = true;
       $http.get(apiEndpoint + '/social/tweets').success(function(tweets) {
@@ -52,6 +53,7 @@
       }).finally(function() {
         vm.loading = false;
       });
+
     });
 
 }(window, window.angular));
