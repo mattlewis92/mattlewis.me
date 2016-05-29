@@ -14,6 +14,10 @@
 
     .constant('moment', window.moment)
 
+    .config(function($touchProvider) {
+      $touchProvider.ngClickOverrideEnabled(true);
+    })
+
     .filter('nl2br', function() {
       return function(input) {
         if (input) {

@@ -27,7 +27,7 @@
           <a class="navbar-brand" href="/">Matt Lewis</a>
         </div>
 
-        <div class="collapse navbar-collapse" collapse="!vm.isMenuVisible">
+        <div class="collapse navbar-collapse" uib-collapse="!vm.isMenuVisible">
           <ul class="nav navbar-nav">
             <li du-scrollspy="about" offset="60">
               <a href="#about" du-smooth-scroll offset="60" ng-click="vm.isMenuVisible = false">
@@ -56,24 +56,24 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li tooltip="Email me" tooltip-placement="bottom">
+            <li uib-tooltip="Email me" tooltip-placement="bottom">
               <a
                 href="http://www.google.com/recaptcha/mailhide/d?k=01ciEon6qhPUtHkA2796MjHQ==&amp;c=ThGegkQW9KQ7Vs-mCVW7AgfavFhM0A417JovGr-JiHc="
                 onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501ciEon6qhPUtHkA2796MjHQ\75\75\46c\75ThGegkQW9KQ7Vs-mCVW7AgfavFhM0A417JovGr-JiHc\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;">
                 <i class="fa fa-envelope-o fa-lg fa-fw"></i> <span class="visible-xs-inline">Email me</span>
               </a>
             </li>
-            <li tooltip="Follow me on GitHub" tooltip-placement="bottom">
+            <li uib-tooltip="Follow me on GitHub" tooltip-placement="bottom">
               <a href="https://github.com/mattlewis92" target="_blank">
                 <i class="fa fa-github fa-lg fa-fw"></i> <span class="visible-xs-inline">Follow me on GitHub</span>
               </a>
             </li>
-            <li tooltip="Connect with me on LinkedIn" tooltip-placement="bottom">
+            <li uib-tooltip="Connect with me on LinkedIn" tooltip-placement="bottom">
               <a href="https://www.linkedin.com/in/mattlewis92" target="_blank">
                 <i class="fa fa-linkedin fa-lg fa-fw"></i> <span class="visible-xs-inline">Connect with me on LinkedIn</span>
               </a>
             </li>
-            <li tooltip="Tweet me" tooltip-placement="bottom">
+            <li uib-tooltip="Tweet me" tooltip-placement="bottom">
               <a href="https://twitter.com/mattlewis92_" target="_blank">
                 <i class="fa fa-twitter fa-lg fa-fw"></i> <span class="visible-xs-inline">Tweet me</span>
               </a>
@@ -248,10 +248,10 @@
         <h2><i class="fa fa-pencil-square-o"></i> Contact me</h2>
         <div ng-hide="vm.submitted">
           <p>For support with my open source projects, please use StackOverflow or file an issue on Github. Thanks!</p>
-          <alert type="danger" ng-show="vm.error">
+          <uib-alert type="danger" ng-show="vm.error">
             <i class="fa fa-exclamation-circle"></i>
             Oops, it looks like something's gone wrong: {{ vm.error.message }}
-          </alert>
+          </uib-alert>
           <div class="row">
             <div
               class="col-md-6"
@@ -306,18 +306,18 @@
           </div>
           <br>
         </div>
-        <alert type="info" ng-show="vm.submitted">
+        <uib-alert type="info" ng-show="vm.submitted">
           <i class="fa fa-check"></i> Thanks for contacting me, I'll get back to you as soon as possible!
-        </alert>
+        </uib-alert>
       </div>
     </section>
     <section id="tweets" class="bg-success" ng-controller="TweetsCtrl as vm" ng-cloak>
       <div class="container">
         <h2><i class="fa fa-twitter"></i> Latest Tweets</h2>
-        <alert type="danger" ng-if="vm.error">
+        <uib-alert type="danger" ng-if="vm.error">
           <i class="fa fa-exclamation-circle"></i>
           Oops, it looks like something went wrong whilst trying to load the tweets. Why not check out my <a href="https://twitter.com/mattlewis92_" target="_blank">Twitter feed</a> directly?
-        </alert>
+        </uib-alert>
         <div ng-if="vm.loading" class="text-center">
           <i class="fa fa-spinner fa-spin fa-4x"></i>
           <h2>Loading...</h2>
@@ -342,7 +342,7 @@
                   </small>
                 </h4>
                 <p class="list-group-item-text">
-                  <i class="fa fa-retweet" ng-show="tweet.retweeted_status" tooltip="This was retweeted by Matt"></i>
+                  <i class="fa fa-retweet" ng-show="tweet.retweeted_status" uib-tooltip="This was retweeted by Matt"></i>
                   <span ng-bind-html="(tweet.retweeted_status.text || tweet.text) | linky:'_blank' | nl2br"></span>
                 </p>
               </div>
@@ -358,13 +358,13 @@
       Website source available <a href="https://github.com/mattlewis92/api.mattlewis.me" target="_blank">here</a> and <a href="https://github.com/mattlewis92/mattlewis.me" target="_blank">here</a> |
       Powered by <a href="https://pages.github.com/" target="_blank">GitHub pages</a>, <a href="https://heroku.com/" target="_blank">Heroku</a> and <a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-touch.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/0.7.2/angular-scroll.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-touch.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
     <script src="script.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
