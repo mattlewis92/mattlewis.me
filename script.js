@@ -28,16 +28,16 @@
 
     .controller('ContactFormCtrl', function($http, apiEndpoint) {
 
-      var vm = this;
+      var $ctrl = this;
 
-      vm.submit = function() {
-        vm.loading = true;
-        $http.post(apiEndpoint + '/contact', vm.form).then(function() {
-          vm.submitted = true;
+      $ctrl.submit = function() {
+        $ctrl.loading = true;
+        $http.post(apiEndpoint + '/contact', $ctrl.form).then(function() {
+          $ctrl.submitted = true;
         }).catch(function(result) {
-          vm.error = result.data;
+          $ctrl.error = result.data;
         }).finally(function() {
-          vm.loading = false;
+          $ctrl.loading = false;
         });
       };
 
@@ -45,17 +45,17 @@
 
     .controller('TweetsCtrl', function($http, moment, apiEndpoint) {
 
-      var vm = this;
-      vm.loading = true;
+      var $ctrl = this;
+      $ctrl.loading = true;
       $http.get(apiEndpoint + '/social/tweets').then(function(result) {
-        vm.tweets = result.data.map(function(tweet) {
+        $ctrl.tweets = result.data.map(function(tweet) {
           tweet.created_at = moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').toDate();
           return tweet;
         });
       }).catch(function(result) {
-        vm.error = result.data;
+        $ctrl.error = result.data;
       }).finally(function() {
-        vm.loading = false;
+        $ctrl.loading = false;
       });
 
     });
