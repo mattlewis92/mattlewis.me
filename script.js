@@ -32,10 +32,10 @@
 
       vm.submit = function() {
         vm.loading = true;
-        $http.post(apiEndpoint + '/contact', vm.form).success(function() {
+        $http.post(apiEndpoint + '/contact', vm.form).then(function() {
           vm.submitted = true;
-        }).error(function(error) {
-          vm.error = error;
+        }).catch(function(result) {
+          vm.error = result.data;
         }).finally(function() {
           vm.loading = false;
         });
@@ -47,13 +47,13 @@
 
       var vm = this;
       vm.loading = true;
-      $http.get(apiEndpoint + '/social/tweets').success(function(tweets) {
-        vm.tweets = tweets.map(function(tweet) {
+      $http.get(apiEndpoint + '/social/tweets').then(function(result) {
+        vm.tweets = result.data.map(function(tweet) {
           tweet.created_at = moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').toDate();
           return tweet;
         });
-      }).error(function(error) {
-        vm.error = error;
+      }).catch(function(result) {
+        vm.error = result.data;
       }).finally(function() {
         vm.loading = false;
       });
