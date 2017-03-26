@@ -1,12 +1,12 @@
 {
   "name": "mattlewis.me",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "npm run lint",
     "lint": "ng lint"
   },
   "private": true,
@@ -32,17 +32,8 @@
   "devDependencies": {
     "@angular/cli": "^1.0.0",
     "@angular/compiler-cli": "^4.0.0",
-    "@types/jasmine": "^2.5.46",
     "@types/node": "^7.0.11",
     "codelyzer": "^2.0.0",
-    "jasmine-core": "^2.5.2",
-    "jasmine-spec-reporter": "^3.2.0",
-    "karma": "^1.5.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-cli": "^1.0.1",
-    "karma-coverage-istanbul-reporter": "^1.0.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
     "ts-node": "^3.0.2",
     "tslint": "^4.5.0",
     "typescript": "~2.2.0"
