@@ -24,12 +24,11 @@ module.exports = {
     }]
   },
   node: {
-    __filename: true,
     __dirname: true
   },
   plugins: [
     new webpack.DefinePlugin({
-      HTMLElement: '""'
+      HTMLElement: JSON.stringify('')
     }),
     new AotPlugin({
       tsConfigPath: path.join(__dirname, '..', 'tsconfig-ngc.json'),
