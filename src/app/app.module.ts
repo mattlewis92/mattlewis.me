@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap/collapse/collapse.module';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip/tooltip.module';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { API_ENDPOINT } from './constants';
 import { AppComponent } from './app.component';
@@ -33,7 +34,8 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     HttpModule,
     NgbCollapseModule.forRoot(),
-    NgbTooltipModule.forRoot()
+    NgbTooltipModule.forRoot(),
+    Ng2PageScrollModule.forRoot()
   ],
   bootstrap: [
     AppComponent
