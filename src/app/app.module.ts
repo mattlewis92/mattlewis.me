@@ -14,6 +14,7 @@ import { MobileAppsComponent } from './mobile-apps/mobile-apps.component';
 import { ContactComponent } from './contact/contact.component';
 import { TweetsComponent } from './tweets/tweets.component';
 import { LinkifyPipe } from './tweets/linkify.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LinkifyPipe } from './tweets/linkify.pipe';
     MobileAppsComponent,
     ContactComponent,
     TweetsComponent,
-    LinkifyPipe
+    LinkifyPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
