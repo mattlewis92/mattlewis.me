@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build": "ng build",
+    "build": "ng build --target=production --environment=prod --aot --sourcemaps --extract-css --output-hashing=all",
     "test": "npm run lint",
     "lint": "ng lint"
   },
