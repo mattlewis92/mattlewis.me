@@ -4,7 +4,6 @@
 /dist
 /tmp
 /out-tsc
-/pre-render/ngfactory
 /pre-render/dist
 
 

@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as webpack from 'webpack';
+import { AotPlugin } from '@ngtools/webpack';
 
 module.exports = {
   entry: {
@@ -16,7 +17,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.ts$/,
-      loader: 'awesome-typescript-loader'
+      loader: '@ngtools/webpack'
     }, {
       test: /\.html$/,
       loader: 'raw-loader',
@@ -29,6 +30,10 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       HTMLElement: '""'
+    }),
+    new AotPlugin({
+      tsConfigPath: path.join(__dirname, '..', 'tsconfig-ngc.json'),
+      entryModule: path.join(__dirname, '..', 'src/app/app.browser.module#AppModule')
     })
   ]
 };
