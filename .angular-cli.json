@@ -9,7 +9,9 @@
       "outDir": "docs",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "angular2-tv-tracker",
+        "react-imgur"
       ],
       "index": "index.html",
       "main": "main.ts",
