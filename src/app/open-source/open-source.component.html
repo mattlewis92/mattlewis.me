@@ -3,61 +3,22 @@
     <h2><i class="fa fa-code"></i> Open source</h2>
     <p>I contribute regularly to the open source community and strive to give back in whatever way I can.</p>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4" *ngFor="let repo of repos$ | async">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Angular bootstrap calendar</h3>
+            <h3 class="panel-title">{{ repo.name }}</h3>
           </div>
           <div class="panel-body">
-            <p>A pure AngularJS, bootstrap styled calendar widget that can be used to display calendar events on a year, month, week or day view.</p>
+            <p class="description">{{ repo.description }}</p>
             <div class="text-center">
-              <iframe src="https://ghbtns.com/github-btn.html?user=mattlewis92&repo=angular-bootstrap-calendar&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              <iframe [src]="('https://ghbtns.com/github-btn.html?user=mattlewis92&repo=' + repo.name + '&type=star&count=true') | trustAsResourceUrl" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
             </div>
           </div>
           <div class="panel-footer text-center">
-            <a href="https://github.com/mattlewis92/angular-bootstrap-calendar"
-               target="_blank"
-               class="btn btn-sm btn-success">
-              View on GitHub <i class="fa fa-external-link"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Angular bluebird promises</h3>
-          </div>
-          <div class="panel-body">
-            <p>Replace the default angular $q service with the bluebird promise library for enhanced promises within your angular app!</p>
-            <div class="text-center">
-              <iframe src="https://ghbtns.com/github-btn.html?user=mattlewis92&repo=angular-bluebird-promises&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-            </div>
-          </div>
-          <div class="panel-footer text-center">
-            <a href="https://github.com/mattlewis92/angular-bluebird-promises"
-               target="_blank"
-               class="btn btn-sm btn-success">
-              View on GitHub <i class="fa fa-external-link"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Angular bootstrap confirm</h3>
-          </div>
-          <div class="panel-body">
-            <p>Displays a highly configurable bootstrap confirmation popover on any element (with no jQuery or bootstrap JS!)</p>
-            <div class="text-center">
-              <iframe src="https://ghbtns.com/github-btn.html?user=mattlewis92&repo=angular-bootstrap-confirm&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-            </div>
-          </div>
-          <div class="panel-footer text-center">
-            <a href="https://github.com/mattlewis92/angular-bootstrap-confirm"
-               target="_blank"
-               class="btn btn-sm btn-success">
+            <a
+              [href]="repo.html_url"
+              target="_blank"
+              class="btn btn-sm btn-success">
               View on GitHub <i class="fa fa-external-link"></i>
             </a>
           </div>

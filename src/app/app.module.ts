@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { TweetsComponent } from './tweets/tweets.component';
 import { LinkifyPipe } from './tweets/linkify.pipe';
 import { FooterComponent } from './footer/footer.component';
+import { TrustAsResourceUrlPipe } from './open-source/trust-as-resource-url.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     TweetsComponent,
     LinkifyPipe,
-    FooterComponent
+    FooterComponent,
+    TrustAsResourceUrlPipe
   ],
   imports: [
     BrowserModule,
