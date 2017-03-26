@@ -26,23 +26,6 @@
       };
     })
 
-    .controller('ContactFormCtrl', function($http, apiEndpoint) {
-
-      var $ctrl = this;
-
-      $ctrl.submit = function() {
-        $ctrl.loading = true;
-        $http.post(apiEndpoint + '/contact', $ctrl.form).then(function() {
-          $ctrl.submitted = true;
-        }).catch(function(result) {
-          $ctrl.error = result.data;
-        }).finally(function() {
-          $ctrl.loading = false;
-        });
-      };
-
-    })
-
     .controller('TweetsCtrl', function($http, moment, apiEndpoint) {
 
       var $ctrl = this;

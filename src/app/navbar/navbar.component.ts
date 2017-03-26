@@ -1,9 +1,8 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mwl-navbar',
-  templateUrl: './navbar.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent {
 

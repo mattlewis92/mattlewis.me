@@ -5,13 +5,22 @@ import { HttpModule } from '@angular/http';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap/collapse/collapse.module';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip/tooltip.module';
 
+import { API_ENDPOINT } from './constants';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { OpenSourceComponent } from './open-source/open-source.component';
+import { MobileAppsComponent } from './mobile-apps/mobile-apps.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    AboutComponent,
+    OpenSourceComponent,
+    MobileAppsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +31,9 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   bootstrap: [
     AppComponent
+  ],
+  providers: [
+    {provide: API_ENDPOINT, useValue: 'https://api.mattlewis.me'}
   ]
 })
 export class AppModule { }

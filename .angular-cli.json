@@ -50,8 +50,7 @@
     "styleExt": "css",
     "component": {
       "spec": false,
-      "inlineStyle": true,
-      "changeDetection": "OnPush"
+      "inlineStyle": true
     },
     "directive": {
       "spec": false

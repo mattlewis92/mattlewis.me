@@ -1,0 +1,71 @@
+<section id="contact">
+  <div class="container" ngForm #contactForm="ngForm">
+    <h2><i class="fa fa-pencil-square-o"></i> Contact me</h2>
+    <div *ngIf="!emailSent">
+      <p>For support with my open source projects, please use StackOverflow or file an issue on Github. Thanks!</p>
+      <div class="alert alert-danger" *ngIf="error">
+        <i class="fa fa-exclamation-circle"></i>
+        Oops, it looks like something's gone wrong: {{ error.message }}
+      </div>
+      <div class="row">
+        <div
+          class="col-md-6"
+          [ngClass]="{'has-error': !nameInput.valid && nameInput.dirty}">
+          <input
+            type="text"
+            name="name"
+            class="form-control input-lg"
+            placeholder="Your name"
+            required
+            #nameInput="ngModel"
+            [(ngModel)]="form.name">
+          <br>
+        </div>
+        <div
+          class="col-md-6"
+          [ngClass]="{'has-error': !emailInput.valid && emailInput.touched}">
+          <input
+            type="email"
+            name="email"
+            class="form-control input-lg"
+            placeholder="Your email address"
+            required
+            #emailInput="ngModel"
+            [(ngModel)]="form.email"
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-md-12"
+          [ngClass]="{'has-error': !messageInput.valid && messageInput.dirty}">
+          <textarea
+            name="message"
+            class="form-control input-lg"
+            placeholder="Your message"
+            required
+            #messageInput="ngModel"
+            [(ngModel)]="form.message">
+          </textarea>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <button
+            type="button"
+            class="btn btn-success btn-block btn-lg"
+            [disabled]="!contactForm.valid || loading"
+            (click)="sendEmail()">
+            <i class="fa fa-spin fa-spinner" *ngIf="loading"></i> Send
+          </button>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div class="alert alert-info" *ngIf="emailSent">
+      <i class="fa fa-check"></i> Thanks for contacting me, I'll get back to you as soon as possible!
+    </div>
+  </div>
+</section>
