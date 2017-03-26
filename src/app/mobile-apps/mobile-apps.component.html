@@ -4,67 +4,33 @@
     <p>A couple of the most recent apps I've built using the awesome <a href="http://ionicframework.com/" target="_blank" class="text-primary"><strong>Ionic framework</strong></a>.</p>
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6" *ngFor="let app of apps">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">SocialSignIn</h3>
+            <h3 class="panel-title">{{ app.name }}</h3>
           </div>
           <div class="panel-body">
             <div class="media">
               <div class="media-left">
                 <img
-                  src="../../assets/img/socialsignin.png"
+                  [src]="app.image"
                   width="100"
                   class="media-object">
               </div>
               <div class="media-body">
-                <p>The SocialSignIn app allows you to schedule and manage posts for all your social networks as well as view your unified social inbox.</p>
+                <p>{{ app.description }}</p>
               </div>
             </div>
           </div>
           <div class="panel-footer text-center">
             <div class="row">
               <div class="col-xs-6 col-sm-4 col-sm-offset-1">
-                <a href="https://itunes.apple.com/gb/app/socialsignin/id564011085" target="_blank">
+                <a [href]="app.links.ios" target="_blank">
                   <img src="../../assets/img/apple-appstore-badge.png" class="img-responsive">
                 </a>
               </div>
               <div class=" col-xs-6 col-sm-4 col-sm-offset-2">
-                <a href="https://play.google.com/store/apps/details?id=uk.co.socialsignin" target="_blank">
-                  <img src="../../assets/img/google-playstore-badge.png" class="img-responsive">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">MiResource</h3>
-          </div>
-          <div class="panel-body">
-            <div class="media">
-              <div class="media-left">
-                <img
-                  src="../../assets/img/miresource.png"
-                  width="100"
-                  class="media-object">
-              </div>
-              <div class="media-body">
-                <p>This is the official app for the Resource Event, taking place on 3-5 March 2015 at ExCel, London.</p>
-              </div>
-            </div>
-          </div>
-          <div class="panel-footer text-center">
-            <div class="row">
-              <div class="col-xs-6 col-sm-4 col-sm-offset-1">
-                <a href="https://itunes.apple.com/us/app/id968397450" target="_blank">
-                  <img src="../../assets/img/apple-appstore-badge.png" class="img-responsive">
-                </a>
-              </div>
-              <div class="col-xs-6 col-sm-4 col-sm-offset-2">
-                <a href="https://play.google.com/store/apps/details?id=com.iwazat.miresource" target="_blank">
+                <a [href]="app.links.android" target="_blank">
                   <img src="../../assets/img/google-playstore-badge.png" class="img-responsive">
                 </a>
               </div>
