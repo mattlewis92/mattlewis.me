@@ -12,6 +12,8 @@ import { AboutComponent } from './about/about.component';
 import { OpenSourceComponent } from './open-source/open-source.component';
 import { MobileAppsComponent } from './mobile-apps/mobile-apps.component';
 import { ContactComponent } from './contact/contact.component';
+import { TweetsComponent } from './tweets/tweets.component';
+import { LinkifyPipe } from './tweets/linkify.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     OpenSourceComponent,
     MobileAppsComponent,
-    ContactComponent
+    ContactComponent,
+    TweetsComponent,
+    LinkifyPipe
   ],
   imports: [
     BrowserModule,

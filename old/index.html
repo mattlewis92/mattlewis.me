@@ -3,51 +3,6 @@
 
 
 
-
-
-    <section id="tweets" class="bg-success" ng-controller="TweetsCtrl as $ctrl" ng-cloak>
-      <div class="container">
-        <h2><i class="fa fa-twitter"></i> Latest Tweets</h2>
-        <uib-alert type="danger" ng-if="$ctrl.error">
-          <i class="fa fa-exclamation-circle"></i>
-          Oops, it looks like something went wrong whilst trying to load the tweets. Why not check out my <a href="https://twitter.com/mattlewis92_" target="_blank">Twitter feed</a> directly?
-        </uib-alert>
-        <div ng-if="$ctrl.loading" class="text-center">
-          <i class="fa fa-spinner fa-spin fa-4x"></i>
-          <h2>Loading...</h2>
-          <br>
-        </div>
-        <div class="list-group" ng-if="$ctrl.tweets.length > 0">
-          <a
-            ng-repeat="tweet in $ctrl.tweets | limitTo:15 track by tweet.id_str"
-            ng-href="https://twitter.com/{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}/status/{{ tweet.retweeted_status.id_str || tweet.id_str }}"
-            target="_blank"
-            class="list-group-item">
-            <div class="media">
-              <div class="media-left">
-                <img class="img-rounded" ng-src="{{ tweet.retweeted_status.user.profile_image_url_https || tweet.user.profile_image_url_https }}">
-              </div>
-              <div class="media-body">
-                <h4 class="list-group-item-heading">
-                  {{ tweet.retweeted_status.user.name || tweet.user.name }}
-                  <small class="pull-right">{{ tweet.created_at | date:'MMM d' }}</small>
-                  <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                    @{{ tweet.retweeted_status.user.screen_name || tweet.user.screen_name }}
-                  </small>
-                </h4>
-                <p class="list-group-item-text">
-                  <i class="fa fa-retweet" ng-show="tweet.retweeted_status" uib-tooltip="This was retweeted by Matt"></i>
-                  <span ng-bind-html="(tweet.retweeted_status.text || tweet.text) | linky:'_blank' | nl2br"></span>
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="https://twitter.com/mattlewis92_" target="_blank" class="list-group-item text-center">
-            <h4 class="list-group-item-heading spacer-top">View all on Twitter <i class="fa fa-external-link"></i></h4>
-          </a>
-        </div>
-      </div>
-    </section>
     <footer class="text-center">
       Website source available <a href="https://github.com/mattlewis92/api.mattlewis.me" target="_blank">here</a> and <a href="https://github.com/mattlewis92/mattlewis.me" target="_blank">here</a> |
       Powered by <a href="https://pages.github.com/" target="_blank">GitHub pages</a>, <a href="https://heroku.com/" target="_blank">Heroku</a> and <a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a>
