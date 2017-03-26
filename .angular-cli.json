@@ -17,14 +17,11 @@
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "tsconfig": "tsconfig.app.json",
-      "testTsconfig": "tsconfig.spec.json",
       "prefix": "mwl",
       "styles": [
         "../node_modules/bootswatch/flatly/bootstrap.css",
         "../node_modules/font-awesome/css/font-awesome.css",
         "styles.css"
-      ],
-      "scripts": [
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -37,16 +34,8 @@
   "lint": [
     {
       "project": "src/tsconfig.app.json"
-    },
-    {
-      "project": "src/tsconfig.spec.json"
     }
   ],
-  "test": {
-    "karma": {
-      "config": "./karma.conf.js"
-    }
-  },
   "defaults": {
     "styleExt": "css",
     "component": {
