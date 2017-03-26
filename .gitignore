@@ -4,7 +4,9 @@
 /dist
 /tmp
 /out-tsc
-/ngc
+/pre-render/ngfactory
+/pre-render/dist
+
 
 # dependencies
 /node_modules

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap/collapse/collapse.module';
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip/tooltip.module';
+import { TooltipModule } from 'ngx-tooltip';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { API_ENDPOINT } from './constants';
@@ -38,7 +38,7 @@ import { TrustAsResourceUrlPipe } from './open-source/trust-as-resource-url.pipe
     FormsModule,
     HttpModule,
     NgbCollapseModule.forRoot(),
-    NgbTooltipModule.forRoot(),
+    TooltipModule,
     Ng2PageScrollModule.forRoot()
   ],
   bootstrap: [

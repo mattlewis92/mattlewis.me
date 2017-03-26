@@ -6,14 +6,14 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { API_ENDPOINT } from '../constants';
 
-interface TweetUser {
+export interface TweetUser {
   id_str: string;
   screen_name: string;
   name: string;
   profile_image_url_https: string;
 }
 
-interface Tweet {
+export interface Tweet {
   id_str: string;
   text: string;
   created_at: string;

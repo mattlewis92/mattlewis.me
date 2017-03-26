@@ -8,7 +8,7 @@ import * as fastclick from 'fastclick';
 export class AppComponent implements OnInit {
 
   ngOnInit(): void {
-    fastclick.attach(document.body);
+    //fastclick.attach(document.body);
   }
 
 }

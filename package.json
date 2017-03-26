@@ -8,7 +8,8 @@
     "build": "ng build --target=production --environment=prod --aot --extract-css --output-hashing=all",
     "test": "npm run lint",
     "lint": "ng lint",
-    "ngc": "ngc -p src/tsconfig.ngc.json"
+    "pre-render": "npm run build && npm run ngc && webpack --config pre-render/webpack.config.ts",
+    "ngc": "rm -rf pre-render/ngfactory && ngc -p tsconfig-ngc.json"
   },
   "private": true,
   "repository": {
@@ -33,6 +34,7 @@
     "font-awesome": "^4.7.0",
     "linkifyjs": "^2.1.4",
     "ng2-page-scroll": "^4.0.0-beta.6",
+    "ngx-tooltip": "^0.0.9",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
@@ -42,9 +44,12 @@
     "@angular/language-service": "^4.0.0",
     "@angular/service-worker": "^1.0.0-beta.8",
     "@types/node": "^7.0.11",
+    "awesome-typescript-loader": "^3.1.2",
     "codelyzer": "^2.0.0",
+    "raw-loader": "^0.5.1",
     "ts-node": "^3.0.2",
     "tslint": "^4.5.0",
-    "typescript": "~2.2.0"
+    "typescript": "~2.2.0",
+    "webpack": "^2.3.2"
   }
 }
