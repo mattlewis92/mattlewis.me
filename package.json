@@ -8,7 +8,7 @@
     "build": "ng build --target=production --environment=prod --aot --extract-css --output-hashing=all",
     "test": "npm run lint",
     "lint": "ng lint",
-    "pre-render": "npm run build && webpack --config pre-render/webpack.config.ts && node ./pre-render/dist/main.js"
+    "pre-render": "npm run build && webpack --progress --config pre-render/webpack.config.ts && node ./pre-render/dist/main.js"
   },
   "private": true,
   "repository": {

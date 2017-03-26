@@ -28,7 +28,9 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      HTMLElement: JSON.stringify('')
+      HTMLElement: JSON.stringify(''),
+      IS_SERVER: JSON.stringify(true),
+      navigator: JSON.stringify({userAgent: ''})
     }),
     new AotPlugin({
       tsConfigPath: path.join(__dirname, '..', 'tsconfig-ngc.json'),

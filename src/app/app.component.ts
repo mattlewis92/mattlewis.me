@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as fastclick from 'fastclick';
 
+declare const IS_SERVER: boolean;
+
 @Component({
   selector: 'mwl-homepage',
   templateUrl: './app.component.html'
@@ -8,7 +10,9 @@ import * as fastclick from 'fastclick';
 export class AppComponent implements OnInit {
 
   ngOnInit(): void {
-    //fastclick.attach(document.body);
+    if (typeof IS_SERVER !== 'undefined' && !IS_SERVER) {
+      fastclick.attach(document.body);
+    }
   }
 
 }
