@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../ngc",
+    "module": "es2015",
+    "baseUrl": "",
+    "types": []
+  },
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "genDir": "../ngc",
+    "debug": true
+  }
+}

@@ -7,7 +7,8 @@
     "start": "ng serve --open",
     "build": "ng build --target=production --environment=prod --aot --extract-css --output-hashing=all",
     "test": "npm run lint",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "ngc": "ngc -p src/tsconfig.ngc.json"
   },
   "private": true,
   "repository": {
