@@ -10,9 +10,9 @@ import { API_ENDPOINT } from '../constants';
 })
 export class ContactComponent {
 
-  emailSent: boolean = false;
+  emailSent = false;
 
-  loading: boolean = false;
+  loading = false;
 
   form: {
     name?: string;

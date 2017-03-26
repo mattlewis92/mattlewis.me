@@ -31,7 +31,7 @@ interface Tweet {
 })
 export class TweetsComponent implements OnInit {
 
-  tweetLoadError: boolean = false;
+  tweetLoadError = false;
 
   tweets$: Observable<Tweet[]>;
 

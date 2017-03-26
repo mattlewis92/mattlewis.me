@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  isMenuVisible: boolean = false;
+  isMenuVisible = false;
 
   closeMenu(): void {
     this.isMenuVisible = false;
