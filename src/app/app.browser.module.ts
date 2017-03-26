@@ -32,7 +32,9 @@ import { TrustAsResourceUrlPipe } from './open-source/trust-as-resource-url.pipe
     TrustAsResourceUrlPipe
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({
+      appId: 'mwl-homepage'
+    }),
     FormsModule,
     HttpModule,
     NgbCollapseModule.forRoot(),
