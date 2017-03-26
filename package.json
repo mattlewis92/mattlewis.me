@@ -12,7 +12,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mattlewis92/mattlewis92.github.io.git"
+    "url": "git+https://github.com/mattlewis92/mattlewis.me.git"
   },
   "dependencies": {
     "@angular/common": "^4.0.0",
