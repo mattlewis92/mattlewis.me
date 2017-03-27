@@ -11,7 +11,16 @@
           <div class="panel-body">
             <p class="description">{{ repo.description }}</p>
             <div class="text-center">
-              <iframe [src]="('https://ghbtns.com/github-btn.html?user=mattlewis92&repo=' + repo.name + '&type=star&count=true') | trustAsResourceUrl" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              <a
+                [href]="repo.html_url"
+                target="_blank">
+                <img [src]="('https://img.shields.io/github/stars/mattlewis92/' + repo.name + '.svg?style=flat-square') | trustAsResourceUrl">
+              </a>
+              <a
+                [href]="'https://npm.im/' + repo.name"
+                target="_blank">
+                <img [src]="('https://img.shields.io/npm/dm/' + repo.name + '.svg?style=flat-square') | trustAsResourceUrl">
+              </a>
             </div>
           </div>
           <div class="panel-footer text-center">
