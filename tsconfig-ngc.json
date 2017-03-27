@@ -4,7 +4,7 @@
     "module": "es2015",
     "baseUrl": ".",
     "declaration": true,
-    "outDir": "./pre-render/ngfactory",
+    "outDir": "./src/pre-render/ngfactory",
     "rootDir": "./",
     "types": []
   },
@@ -13,7 +13,7 @@
   ],
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
-    "genDir": "./pre-render/ngfactory",
+    "genDir": "./src/pre-render/ngfactory",
     "debug": true
   }
 }

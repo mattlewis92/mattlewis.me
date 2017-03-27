@@ -33,8 +33,8 @@ export default {
       navigator: JSON.stringify({userAgent: ''})
     }),
     new AotPlugin({
-      tsConfigPath: path.join(__dirname, '..', 'tsconfig-ngc.json'),
-      entryModule: path.join(__dirname, '..', 'src/app/app.module#AppModule')
+      tsConfigPath: path.join(__dirname, '..', '..', 'tsconfig-ngc.json'),
+      entryModule: path.join(__dirname, '..', 'app/app.module#AppModule')
     })
   ]
 };
