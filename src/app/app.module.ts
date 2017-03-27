@@ -18,6 +18,7 @@ import { LinkifyPipe } from './tweets/linkify.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { TrustAsResourceUrlPipe } from './open-source/trust-as-resource-url.pipe';
 import { ScrollSpyDirective } from './navbar/scroll-spy.directive';
+import { API_ENDPOINT as apiEndpointValue } from '../shared/constants';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { ScrollSpyDirective } from './navbar/scroll-spy.directive';
     AppComponent
   ],
   providers: [
-    {provide: API_ENDPOINT, useValue: 'https://api.mattlewis.me'}
+    {provide: API_ENDPOINT, useValue: apiEndpointValue}
   ]
 })
 export class AppModule { }
