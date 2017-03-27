@@ -17,6 +17,7 @@ import { TweetsComponent } from './tweets/tweets.component';
 import { LinkifyPipe } from './tweets/linkify.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { TrustAsResourceUrlPipe } from './open-source/trust-as-resource-url.pipe';
+import { ScrollSpyDirective } from './navbar/scroll-spy.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TrustAsResourceUrlPipe } from './open-source/trust-as-resource-url.pipe
     TweetsComponent,
     LinkifyPipe,
     FooterComponent,
-    TrustAsResourceUrlPipe
+    TrustAsResourceUrlPipe,
+    ScrollSpyDirective
   ],
   imports: [
     BrowserModule.withServerTransition({

@@ -12,27 +12,27 @@
 
     <div class="collapse navbar-collapse" [ngbCollapse]="!isMenuVisible">
       <ul class="nav navbar-nav">
-        <li>
+        <li mwlScrollSpy="about">
           <a href="#about" pageScroll (click)="closeMenu()">
             <i class="fa fa-info-circle fa-lg fa-fw"></i> About me
           </a>
         </li>
-        <li>
+        <li mwlScrollSpy="opensource">
           <a href="#opensource" pageScroll (click)="closeMenu()">
             <i class="fa fa-code fa-lg fa-fw"></i> Open source
           </a>
         </li>
-        <li>
+        <li mwlScrollSpy="mobileapps">
           <a href="#mobileapps" pageScroll (click)="closeMenu()">
             <i class="fa fa-mobile fa-lg fa-fw"></i> Mobile apps
           </a>
         </li>
-        <li>
+        <li mwlScrollSpy="contact">
           <a href="#contact" pageScroll (click)="closeMenu()">
             <i class="fa fa-pencil-square-o fa-lg fa-fw"></i> Contact me
           </a>
         </li>
-        <li>
+        <li mwlScrollSpy="tweets">
           <a href="#tweets" pageScroll (click)="closeMenu()">
             <i class="fa fa-twitter fa-lg fa-fw"></i> Tweets
           </a>
