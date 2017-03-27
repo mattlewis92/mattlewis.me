@@ -15,11 +15,11 @@ export interface TweetUser {
 
 export interface Tweet {
   id_str: string;
-  text: string;
+  full_text: string;
   created_at: string;
   retweeted_status: {
     id_str: string;
-    text: string;
+    full_text: string;
     user: TweetUser
   };
   user: TweetUser;
