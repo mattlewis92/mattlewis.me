@@ -22,11 +22,20 @@
       "/assets/img/google-playstore-badge.png": "e3922d9e82031b09924307816e8089fae4c1892f",
       "/assets/img/miresource.png": "780fc1c493bc9d6542159596537fae0e7c806192",
       "/assets/img/socialsignin.png": "8faf623bfaa451365bc9d2e16df8ebc0a3d84edb",
+      "/assets/manifest/icons/icon-128x128.png": "2e376353f9d4aeca9e420b72e66ea57b0227e96b",
+      "/assets/manifest/icons/icon-144x144.png": "c7ea63afb4cccd750576991695af997764b60f23",
+      "/assets/manifest/icons/icon-152x152.png": "e75d70779f7c6ff97771966313c42d162d4e99fa",
+      "/assets/manifest/icons/icon-192x192.png": "8545340ee6458ae854bab1b18c60323037b2b45c",
+      "/assets/manifest/icons/icon-384x384.png": "91cbde2f20769c3895a1998e11472b9028b0f819",
+      "/assets/manifest/icons/icon-512x512.png": "cf39b8aa9fc897be70ff396d738bc03cb7222cff",
+      "/assets/manifest/icons/icon-72x72.png": "931e4da10dff3051d8c1d9750a8e56c889640fda",
+      "/assets/manifest/icons/icon-96x96.png": "afe8a2b06a3017652c984eb08ac63d1db8948207",
+      "/assets/manifest/manifest.json": "293e708bd367b9ec70d57ca773df2e983cfeb817",
       "/favicon.ico": "bda38b3c9ea393c06fc7d3e32893e21e6a52e679",
       "/angular2-tv-tracker/index.html": "866ab9d92c206c7de2340fb5eeab212d86d51376",
       "/react-imgur/index.html": "5ee9c72474b96915ba49ae8cda813054998a22e0",
       "/CNAME": "190303b55173d8d0044530cb21d5968ba12a4c22",
-      "/index.html": "96b5aa778a77b177c1dad8d75a0ded8e56599914"
+      "/index.html": "d93d27c7550453e75eefa12919f8ce6cba1e76a0"
     },
     "_generatedFromWebpack": true
   }
