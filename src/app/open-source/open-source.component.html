@@ -14,12 +14,16 @@
               <a
                 [href]="repo.html_url"
                 target="_blank">
-                <img [src]="('https://img.shields.io/github/stars/mattlewis92/' + repo.name + '.svg?style=flat-square') | trustAsResourceUrl">
+                <img
+                  [src]="('https://img.shields.io/github/stars/mattlewis92/' + repo.name + '.svg?style=flat-square') | trustAsResourceUrl"
+                  alt="NPM downloads">
               </a>
               <a
                 [href]="'https://npm.im/' + repo.name"
                 target="_blank">
-                <img [src]="('https://img.shields.io/npm/dm/' + repo.name + '.svg?style=flat-square') | trustAsResourceUrl">
+                <img
+                  [src]="('https://img.shields.io/npm/dm/' + repo.name + '.svg?style=flat-square') | trustAsResourceUrl"
+                  alt="Github stars">
               </a>
             </div>
           </div>

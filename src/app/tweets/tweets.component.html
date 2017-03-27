@@ -22,7 +22,10 @@
         class="list-group-item">
         <div class="media">
           <div class="media-left">
-            <img class="img-rounded" [src]="tweet.retweeted_status?.user?.profile_image_url_https || tweet.user.profile_image_url_https">
+            <img
+              class="img-rounded"
+              [src]="tweet.retweeted_status?.user?.profile_image_url_https || tweet.user.profile_image_url_https"
+              alt="Twitter avatar">
           </div>
           <div class="media-body">
             <h4 class="list-group-item-heading">
