@@ -7,7 +7,7 @@ import * as fs from 'fs';
 import { renderModuleFactory } from '@angular/platform-server';
 import { AppServerModuleNgFactory } from './ngfactory/src/server.module.ngfactory';
 
-const indexFilePath: string = path.join(__dirname, '..', 'docs', 'index.html');
+const indexFilePath: string = path.join(__dirname, '..', '..', 'docs', 'index.html');
 const indexFileContents: string = fs.readFileSync(indexFilePath).toString();
 
 renderModuleFactory(AppServerModuleNgFactory, {
