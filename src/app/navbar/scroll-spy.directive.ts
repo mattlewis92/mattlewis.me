@@ -26,7 +26,7 @@ export class ScrollSpyDirective implements AfterViewInit {
 
   @HostListener('document:scroll')
   onScroll() {
-    const boundingRectangle: ClientRect = this.document.getElementById(this.elementId).getBoundingClientRect();
+    const boundingRectangle: ClientRect = this.document.querySelector(`#${this.elementId}`).getBoundingClientRect();
     this.isActive = adjustPosition(boundingRectangle.top) <= 0 && adjustPosition(boundingRectangle.bottom) >= 0;
   }
 
