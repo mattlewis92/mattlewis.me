@@ -11,7 +11,9 @@
         <div
           class="col-md-6"
           [ngClass]="{'has-error': !nameInput.valid && nameInput.dirty}">
+          <label for="name" [hidden]="true">Your name</label>
           <input
+            id="name"
             type="text"
             name="name"
             class="form-control input-lg"
@@ -24,7 +26,9 @@
         <div
           class="col-md-6"
           [ngClass]="{'has-error': !emailInput.valid && emailInput.touched}">
+          <label for="email" [hidden]="true">Your email address</label>
           <input
+            id="email"
             type="email"
             name="email"
             class="form-control input-lg"
@@ -40,7 +44,9 @@
         <div
           class="col-md-12"
           [ngClass]="{'has-error': !messageInput.valid && messageInput.dirty}">
+          <label for="email" [hidden]="true">Your message</label>
           <textarea
+            id="message"
             name="message"
             class="form-control input-lg"
             placeholder="Your message"
