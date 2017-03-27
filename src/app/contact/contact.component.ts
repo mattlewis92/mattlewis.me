@@ -12,9 +12,6 @@ import { getServiceWorkerMessageStorageKey } from '../../shared/functions';
 import { ContactForm, BackgroundSyncContactFormMessage, BackgroundSyncMessage, BackgroundSyncResult } from '../../shared/interfaces';
 import { BACKGROUND_SYNC_TYPE_CONTACT_EMAIL } from '../../shared/constants';
 
-// always used indexeddb as its the only driver available to a service worker
-localforage.setDriver(localforage.INDEXEDDB);
-
 @Component({
   selector: 'mwl-contact',
   templateUrl: './contact.component.html'
@@ -51,6 +48,9 @@ export class ContactComponent {
     }
 
     if ('serviceWorker' in navigator && 'SyncManager' in window) {
+
+      // always used indexeddb as its the only driver available to a service worker
+      localforage.setDriver(localforage.INDEXEDDB);
 
       const message: BackgroundSyncMessage<BackgroundSyncContactFormMessage> = {
         type: BACKGROUND_SYNC_TYPE_CONTACT_EMAIL,
