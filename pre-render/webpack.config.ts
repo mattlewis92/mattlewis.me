@@ -34,7 +34,7 @@ export default {
     }),
     new AotPlugin({
       tsConfigPath: path.join(__dirname, '..', 'tsconfig-ngc.json'),
-      entryModule: path.join(__dirname, '..', 'src/app/app.browser.module#AppModule')
+      entryModule: path.join(__dirname, '..', 'src/app/app.module#AppModule')
     })
   ]
 };
