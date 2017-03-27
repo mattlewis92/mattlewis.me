@@ -1,7 +1,7 @@
 <section id="mobileapps" class="bg-success">
   <div class="container">
     <h2><i class="fa fa-mobile"></i> Mobile apps</h2>
-    <p>A couple of the most recent apps I've built using the awesome <a href="http://ionicframework.com/" target="_blank" class="text-primary"><strong>Ionic framework</strong></a>.</p>
+    <p>A couple of the most recent apps I've built using the awesome <a href="http://ionicframework.com/" target="_blank" rel="noopener" class="text-primary"><strong>Ionic framework</strong></a>.</p>
 
     <div class="row">
       <div class="col-md-6" *ngFor="let app of apps">
@@ -26,12 +26,12 @@
           <div class="panel-footer text-center">
             <div class="row">
               <div class="col-xs-6 col-sm-4 col-sm-offset-1">
-                <a [href]="app.links.ios" target="_blank">
+                <a [href]="app.links.ios" target="_blank" rel="noopener">
                   <img src="../../assets/img/apple-appstore-badge.png" class="img-responsive" alt="apple-app-store">
                 </a>
               </div>
               <div class=" col-xs-6 col-sm-4 col-sm-offset-2">
-                <a [href]="app.links.android" target="_blank">
+                <a [href]="app.links.android" target="_blank" rel="noopener">
                   <img src="../../assets/img/google-playstore-badge.png" class="img-responsive" alt="google-play-store">
                 </a>
               </div>

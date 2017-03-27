@@ -19,6 +19,7 @@
         *ngFor="let tweet of tweets | slice:0:15"
         href="https://twitter.com/{{ tweet.retweeted_status?.user?.screen_name || tweet.user.screen_name }}/status/{{ tweet.retweeted_status?.id_str || tweet.id_str }}"
         target="_blank"
+        rel="noopener"
         class="list-group-item">
         <div class="media">
           <div class="media-left">
@@ -42,7 +43,7 @@
           </div>
         </div>
       </a>
-      <a href="https://twitter.com/mattlewis92_" target="_blank" class="list-group-item text-center">
+      <a href="https://twitter.com/mattlewis92_" target="_blank" rel="noopener" class="list-group-item text-center">
         <h4 class="list-group-item-heading spacer-top">View all on Twitter <i class="fa fa-external-link"></i></h4>
       </a>
     </div>
