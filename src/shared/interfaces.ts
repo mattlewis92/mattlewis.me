@@ -9,6 +9,13 @@ export interface ContactForm {
   message: string;
 }
 
-export interface ContactFormBackgroundSyncPayload {
+export interface BackgroundSyncContactFormMessage {
   contactForm: ContactForm;
+}
+
+export interface BackgroundSyncResult<PayloadType> {
+  id: string;
+  result: any;
+  isError: boolean;
+  message: BackgroundSyncMessage<PayloadType>
 }
