@@ -9,7 +9,7 @@
     "types": []
   },
   "files": [
-    "./src/app/app.server.module.ts"
+    "./src/server.module.ts"
   ],
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
