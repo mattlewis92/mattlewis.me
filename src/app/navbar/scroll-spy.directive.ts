@@ -3,7 +3,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 import { PageScrollConfig } from 'ng2-page-scroll';
 
 function adjustPosition(yCoord: number): number {
-  return yCoord - PageScrollConfig.defaultScrollOffset;
+  return Math.floor(yCoord) - PageScrollConfig.defaultScrollOffset;
 }
 
 @Directive({
@@ -28,7 +28,7 @@ export class ScrollSpyDirective implements AfterViewInit {
   onScroll() {
     if (typeof this.document.querySelector !== 'undefined') {
       const boundingRectangle: ClientRect = this.document.querySelector(`#${this.elementId}`).getBoundingClientRect();
-      this.isActive = adjustPosition(boundingRectangle.top) <= 0 && adjustPosition(boundingRectangle.bottom) >= 0;
+      this.isActive = adjustPosition(boundingRectangle.top) <= 0 && adjustPosition(boundingRectangle.bottom) > 0;
     }
   }
 
