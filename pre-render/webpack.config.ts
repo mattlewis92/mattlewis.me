@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 import { AotPlugin } from '@ngtools/webpack';
 
-module.exports = {
+export default {
   entry: {
     main: path.join(__dirname, 'entry.ts')
   },

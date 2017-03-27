@@ -8,7 +8,7 @@
     "build": "ng build --target=production --environment=prod --aot --extract-css --output-hashing=all",
     "test": "npm run lint",
     "lint": "ng lint",
-    "pre-render": "npm run build && webpack --progress --config pre-render/webpack.config.ts && node ./pre-render/dist/main.js"
+    "pre-render": "npm run build && ts-node pre-render/build-and-execute.ts"
   },
   "private": true,
   "repository": {
@@ -45,6 +45,7 @@
     "@ngtools/webpack": "^1.3.0",
     "@types/node": "^7.0.11",
     "codelyzer": "^2.0.0",
+    "memory-fs": "^0.4.1",
     "raw-loader": "^0.5.1",
     "ts-node": "^3.0.2",
     "tslint": "^4.5.0",
