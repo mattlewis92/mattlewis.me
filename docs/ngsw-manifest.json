@@ -1,0 +1,32 @@
+{
+  "static": {
+    "urls": {
+      "/glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf": "44bc1850f570972267b169ae18f1cb06b611ffa2",
+      "/glyphicons-halflings-regular.89889688147bd7575d63.svg": "de51a8494180a6db074af2dee2383f0a363c5b08",
+      "/glyphicons-halflings-regular.f4769f9bdb7466be6508.eot": "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3",
+      "/glyphicons-halflings-regular.fa2772327f55d8198301.woff": "278e49a86e634da6f2a02f3b47dd9d2a8f26210f",
+      "/glyphicons-halflings-regular.448c34a56d699c29117a.woff2": "ca35b697d99cae4d1b60f2d60fcd37771987eb07",
+      "/fontawesome-webfont.912ec66d7572ff821749.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
+      "/fontawesome-webfont.b06871f281fee6b241d6.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
+      "/fontawesome-webfont.674f50d287a8c48dc19b.eot": "d980c2ce873dc43af460d4d572d441304499f400",
+      "/fontawesome-webfont.fee66e712a8a08eef580.woff": "28b782240b3e76db824e12c02754a9731a167527",
+      "/fontawesome-webfont.af7ae505a9eed503f8b8.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
+      "/polyfills.fd472fe3eff05034655e.bundle.js": "19f466403d947b102ac93ab3d9c9e57ece148a54",
+      "/main.a0cdf2e6c0ec6f99ef58.bundle.js": "30795048e28b2359ef6196313502c164132c63f9",
+      "/sw-register.b73048fe3d9f8a1e7ae5.bundle.js": "a98270c864fc34e37b1d992bfe5994323558c2f8",
+      "/vendor.553533e1352475daec0d.bundle.js": "88f0feaeb45d73801cec1944273f5a976de40c95",
+      "/inline.0af384b07ed0287b4406.bundle.js": "16c41dc74ccc6928cd310f3dbc109e1d60342ab5",
+      "/styles.48ffb62e81b158392b71.bundle.css": "eaba384c650d3497cbe03d07e6ced34dcb7ca05e",
+      "/assets/img/.DS_Store": "36c1fa6af0d6f5a4ce65065511d815ecba53f442",
+      "/assets/img/apple-appstore-badge.png": "167dfed593d847769692e5ee0358795a0acee74c",
+      "/assets/img/google-playstore-badge.png": "e3922d9e82031b09924307816e8089fae4c1892f",
+      "/assets/img/miresource.png": "780fc1c493bc9d6542159596537fae0e7c806192",
+      "/assets/img/socialsignin.png": "8faf623bfaa451365bc9d2e16df8ebc0a3d84edb",
+      "/favicon.ico": "bda38b3c9ea393c06fc7d3e32893e21e6a52e679",
+      "/angular2-tv-tracker/index.html": "866ab9d92c206c7de2340fb5eeab212d86d51376",
+      "/react-imgur/index.html": "5ee9c72474b96915ba49ae8cda813054998a22e0",
+      "/index.html": "99fa9cf3bf313205ddfd445f1c434238b691f351"
+    },
+    "_generatedFromWebpack": true
+  }
+}
