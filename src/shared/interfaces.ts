@@ -17,5 +17,5 @@ export interface BackgroundSyncResult<PayloadType> {
   id: string;
   result: any;
   isError: boolean;
-  message: BackgroundSyncMessage<PayloadType>
+  message: BackgroundSyncMessage<PayloadType>;
 }

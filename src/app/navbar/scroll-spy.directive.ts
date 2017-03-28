@@ -1,4 +1,4 @@
-import { Directive, HostListener, Input, AfterViewInit, Inject } from '@angular/core';
+import { Directive, HostListener, Input, AfterViewInit, Inject, HostBinding } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { PageScrollConfig } from 'ng2-page-scroll';
 
@@ -7,22 +7,20 @@ function adjustPosition(yCoord: number): number {
 }
 
 @Directive({
-  selector: '[mwlScrollSpy]',
-  host: {
-    '[class.active]': 'isActive'
-  }
+  selector: '[mwlScrollSpy]'
 })
 export class ScrollSpyDirective implements AfterViewInit {
 
-  isActive = false;
+  @HostBinding('class.active') isActive = false;
 
-  @Input('mwlScrollSpy') elementId: string;
+  @Input('mwlScrollSpy') elementId: string; // tslint:disable-line
 
   constructor(@Inject(DOCUMENT) private document: any) {}
 
   ngAfterViewInit(): void {
     setTimeout(() => this.onScroll());
   }
+
 
   @HostListener('document:scroll')
   onScroll() {

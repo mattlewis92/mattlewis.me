@@ -63,7 +63,7 @@ export class ContactComponent {
       const messageSaved: Promise<any> = localforage.setItem(getServiceWorkerMessageStorageKey(messageId), message);
 
       fromEvent(navigator.serviceWorker, 'message')
-        .map((message: ServiceWorkerMessageEvent) => JSON.parse(message.data))
+        .map((serviceWorkerMessage: ServiceWorkerMessageEvent) => JSON.parse(serviceWorkerMessage.data))
         .filter((result: BackgroundSyncResult<BackgroundSyncContactFormMessage>) => {
           return result.message.type === BACKGROUND_SYNC_TYPE_CONTACT_EMAIL && result.id === messageId;
         })
