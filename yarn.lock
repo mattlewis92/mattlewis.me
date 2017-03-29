@@ -151,12 +151,6 @@
     magic-string "^0.19.0"
     source-map "^0.5.6"
 
-"@types/localforage@^0.0.34":
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/@types/localforage/-/localforage-0.0.34.tgz#5e31c32dd8791ec4b9ff3ef47c9cb55b2d0d9438"
-  dependencies:
-    localforage "*"
-
 "@types/node@^6.0.46":
   version "6.0.68"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.68.tgz#0c43b6b8b9445feb86a0fbd3457e3f4bc591e66d"
@@ -2472,7 +2466,7 @@ loader-utils@^1.0.2:
     emojis-list "^2.0.0"
     json5 "^0.5.0"
 
-localforage@*, localforage@^1.5.0:
+localforage@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.5.0.tgz#6b994e19b56611fa85df3992df397ac4ab66e815"
   dependencies:
