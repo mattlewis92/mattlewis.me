@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "pre-render": "ts-node src/pre-render/build-and-execute.ts",
     "predeploy": "npm test",
-    "deploy": "npm run build && npm run service-worker && npm run pre-render && git add docs && git commit -m \"Build docs site\" && git push",
+    "deploy": "npm run build && cp -R dist docs && rm -rf dist && npm run service-worker && npm run pre-render && git add docs && git commit -m \"Build docs site\" && git push",
     "service-worker": "webpack -p --config=src/service-worker/webpack.config.ts"
   },
   "private": true,
