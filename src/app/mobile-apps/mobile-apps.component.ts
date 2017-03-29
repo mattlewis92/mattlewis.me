@@ -8,7 +8,7 @@ export class MobileAppsComponent {
 
   apps: any[] = [{
     name: 'SocialSignIn',
-    image: '/assets/img/socialsignin.png',
+    image: '/assets/img/socialsignin.webp',
     description: 'The SocialSignIn app allows you to schedule and manage posts for all your social networks ' +
     'as well as view your unified social inbox.',
     links: {
@@ -17,7 +17,7 @@ export class MobileAppsComponent {
     }
   }, {
     name: 'MiResource',
-    image: '/assets/img/miresource.png',
+    image: '/assets/img/miresource.webp',
     description: 'This is the official app for the Resource Event, taking place on 3-5 March 2015 at ExCel, London.',
     links: {
       ios: 'https://itunes.apple.com/us/app/id968397450',
