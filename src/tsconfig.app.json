@@ -10,6 +10,7 @@
     "test.ts",
     "**/*.spec.ts",
     "service-worker",
-    "pre-render"
+    "pre-render",
+    "scripts"
   ]
 }
