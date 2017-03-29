@@ -2703,10 +2703,6 @@ ng2-page-scroll@^4.0.0-beta.6:
   version "4.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/ng2-page-scroll/-/ng2-page-scroll-4.0.0-beta.6.tgz#c8c2c5bb5a4670a9fcea783fc047579d673bed03"
 
-ngx-tooltip@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/ngx-tooltip/-/ngx-tooltip-0.0.9.tgz#9821693e7d91c57dae8189c5d6a810526890b6f6"
-
 no-case@^2.2.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.1.tgz#7aeba1c73a52184265554b7dc03baf720df80081"

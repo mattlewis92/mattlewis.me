@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap/collapse/collapse.module';
-import { TooltipModule } from 'ngx-tooltip';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip/tooltip.module';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { API_ENDPOINT } from './constants';
@@ -41,7 +41,7 @@ import { API_ENDPOINT as apiEndpointValue } from '../shared/constants';
     FormsModule,
     HttpModule,
     NgbCollapseModule.forRoot(),
-    TooltipModule,
+    NgbTooltipModule.forRoot(),
     Ng2PageScrollModule.forRoot()
   ],
   bootstrap: [

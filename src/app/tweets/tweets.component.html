@@ -37,7 +37,7 @@
               </small>
             </h4>
             <p class="list-group-item-text">
-              <i class="fa fa-retweet" *ngIf="tweet.retweeted_status" tooltip="This was retweeted by Matt"></i>
+              <i class="fa fa-retweet" *ngIf="tweet.retweeted_status" ngbTooltip="This was retweeted by Matt"></i>
               <span [innerHtml]="(tweet.retweeted_status?.full_text || tweet.full_text) | linkify:{target: '_blank', nl2br: true, attributes: {rel: 'noopener'}}"></span>
             </p>
           </div>
