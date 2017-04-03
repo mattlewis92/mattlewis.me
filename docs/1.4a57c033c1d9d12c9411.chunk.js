@@ -1,4 +1,4 @@
-webpackJsonp([1,7],{"22C0":function(e,t,r){(function(t){var r,r;/*!
+webpackJsonp([1,8],{"22C0":function(e,t,r){(function(t){var r,r;/*!
     localForage -- Offline Storage, Improved
     Version 1.5.0
     https://localforage.github.io/localForage
