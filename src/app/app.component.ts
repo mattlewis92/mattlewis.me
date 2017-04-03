@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import * as fastclick from 'fastclick';
-
-declare const IS_SERVER: boolean;
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'mwl-homepage',
@@ -9,9 +7,13 @@ declare const IS_SERVER: boolean;
 })
 export class AppComponent implements OnInit {
 
+  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+
   ngOnInit(): void {
-    if (typeof IS_SERVER !== 'undefined' && !IS_SERVER) {
-      fastclick.attach(document.body);
+    if (isPlatformBrowser(this.platformId)) {
+      System.import('fastclick').then(fastclick => {
+        fastclick.attach(document.body);
+      });
     }
   }
 
