@@ -7,7 +7,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class AppComponent implements OnInit {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
