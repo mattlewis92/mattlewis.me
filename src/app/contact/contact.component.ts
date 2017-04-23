@@ -16,6 +16,8 @@ import { BACKGROUND_SYNC_TYPE_CONTACT_EMAIL } from '../../shared/constants';
 })
 export class ContactComponent {
 
+  contactForm: any;
+
   emailSent = false;
 
   loading = false;
