@@ -35,7 +35,7 @@ export class ContactComponent {
   sendEmail() {
     this.loading = true;
 
-    function sendWithAngular() {
+    const sendWithAngular = () => {
       this.http.post(`${this.apiEndpoint}/contact`, this.form).map(res => res.json()).finally(() => {
         this.loading = false;
       }).subscribe(() => {
@@ -43,7 +43,7 @@ export class ContactComponent {
       }, (err: Response) => {
         this.error = err.json();
       });
-    }
+    };
 
     if ('serviceWorker' in navigator && 'SyncManager' in window) {
 
