@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
@@ -33,15 +33,15 @@ export class TweetsComponent implements OnInit {
 
   tweetLoadError = false;
 
-  tweets$: Observable<Tweet[]>;
+  tweets$: Observable<HttpErrorResponse | Tweet[]>;
 
-  constructor(private http: Http, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
+  constructor(private http: HttpClient, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
 
   ngOnInit() {
-    this.tweets$ = this.http.get(`${this.apiEndpoint}/social/tweets`).catch((err: Response) => {
+    this.tweets$ = this.http.get<Tweet[]>(`${this.apiEndpoint}/social/tweets`).catch((err: HttpErrorResponse) => {
       this.tweetLoadError = true;
       return of(err);
-    }).map(res => res.json());
+    });
   }
 
 }

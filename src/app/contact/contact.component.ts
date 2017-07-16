@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { fromEvent } from 'rxjs/observable/fromEvent';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/finally';
@@ -32,18 +32,18 @@ export class ContactComponent {
     message: string;
   };
 
-  constructor(private http: Http, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
+  constructor(private http: HttpClient, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
 
   sendEmail() {
     this.loading = true;
 
     const sendWithAngular = () => {
-      this.http.post(`${this.apiEndpoint}/contact`, this.form).map(res => res.json()).finally(() => {
+      this.http.post(`${this.apiEndpoint}/contact`, this.form).finally(() => {
         this.loading = false;
       }).subscribe(() => {
         this.emailSent = true;
-      }, (err: Response) => {
-        this.error = err.json();
+      }, (err: HttpErrorResponse) => {
+        this.error = err.error;
       });
     };
 

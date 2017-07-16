@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { API_ENDPOINT } from '../constants';
 
@@ -20,10 +20,10 @@ export class OpenSourceComponent implements OnInit {
 
   repos$: Observable<any[]>;
 
-  constructor(private http: Http, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
+  constructor(private http: HttpClient, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
 
   ngOnInit(): void {
-    this.repos$ = this.http.get(`${this.apiEndpoint}/social/github/repos`).map(res => res.json()).map(repos => {
+    this.repos$ = this.http.get<any[]>(`${this.apiEndpoint}/social/github/repos`).map(repos => {
       return REPOS_TO_DISPLAY.map(repoId => repos.find(repo => repo.id === repoId));
     });
   }

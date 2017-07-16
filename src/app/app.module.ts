@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap/collapse/collapse.module';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip/tooltip.module';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
@@ -39,7 +39,7 @@ import { API_ENDPOINT as apiEndpointValue } from '../shared/constants';
       appId: 'mwl-homepage'
     }),
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     NgbCollapseModule.forRoot(),
     NgbTooltipModule.forRoot(),
     Ng2PageScrollModule.forRoot()
