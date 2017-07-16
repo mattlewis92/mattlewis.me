@@ -53,6 +53,7 @@
     "memory-fs": "^0.4.1",
     "raw-loader": "^0.5.1",
     "ts-node": "^3.0.2",
+    "tslib": "^1.7.1",
     "tslint": "^5.1.0",
     "typescript": "~2.4.1",
     "webpack": "^3.3.0"
