@@ -1,25 +1,25 @@
 {
   "static": {
     "urls": {
-      "/glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf": "44bc1850f570972267b169ae18f1cb06b611ffa2",
       "/glyphicons-halflings-regular.89889688147bd7575d63.svg": "de51a8494180a6db074af2dee2383f0a363c5b08",
-      "/glyphicons-halflings-regular.f4769f9bdb7466be6508.eot": "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3",
+      "/glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf": "44bc1850f570972267b169ae18f1cb06b611ffa2",
       "/glyphicons-halflings-regular.fa2772327f55d8198301.woff": "278e49a86e634da6f2a02f3b47dd9d2a8f26210f",
+      "/glyphicons-halflings-regular.f4769f9bdb7466be6508.eot": "86b6f62b7853e67d3e635f6512a5a5efc58ea3c3",
       "/glyphicons-halflings-regular.448c34a56d699c29117a.woff2": "ca35b697d99cae4d1b60f2d60fcd37771987eb07",
-      "/fontawesome-webfont.912ec66d7572ff821749.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
-      "/fontawesome-webfont.b06871f281fee6b241d6.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
       "/fontawesome-webfont.674f50d287a8c48dc19b.eot": "d980c2ce873dc43af460d4d572d441304499f400",
+      "/fontawesome-webfont.b06871f281fee6b241d6.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
+      "/fontawesome-webfont.912ec66d7572ff821749.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
       "/fontawesome-webfont.fee66e712a8a08eef580.woff": "28b782240b3e76db824e12c02754a9731a167527",
       "/fontawesome-webfont.af7ae505a9eed503f8b8.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
-      "/0.46a68fff04658239822f.chunk.js": "07783d779c93aa05d61bce8f5963e07da7586780",
-      "/1.4a57c033c1d9d12c9411.chunk.js": "d1944709593bae3a240ac643e3aa6c9138405103",
-      "/2.dd757b2dc9da908e39c6.chunk.js": "96d56df43a546da6e59de4503cd8224359715265",
-      "/polyfills.2042a2f58e2393e98991.bundle.js": "bd6f5ac4e895bf39589b651b4bd7fa3f4602b9df",
-      "/main.e6512e4df715c1d49dda.bundle.js": "f9b0113486715d529556ef7703aa67766762dc9d",
-      "/sw-register.19720059586f7f456234.bundle.js": "f25b5cdf174d72ef0d78b6f2790cc62236a391ce",
-      "/vendor.e556bbbbd94501065ae9.bundle.js": "c472617ee4cbf0869759f2a5d21b7b1bf0dd4c00",
-      "/inline.967c56a028dc88b06657.bundle.js": "6f81593bd21522f927849b996d847fdb0d0ff133",
-      "/styles.2f9269b56f34d73bc900.bundle.css": "59217636221eb621c9d71e51b8be5426ee4e3e71",
+      "/0.72e83a7ad211b183ad97.chunk.js": "0f2d0fe52a31c647581deefec0d4b634756fe119",
+      "/1.417fd715ed292a42f892.chunk.js": "828d1cc235df2eef6d81904580da08cefc8339be",
+      "/2.4d8c990bcb1999e447cf.chunk.js": "1b5c358587573d711a88cf1c3dd83cd4092bb2b4",
+      "/polyfills.af740f3d974b6f650196.bundle.js": "dfae39d291fe3c46df444a26526e9d23d9e503da",
+      "/main.4d9938480e8ef25b2df5.bundle.js": "e10d65ed72ac384c76ce9e3fdb4d81095c29503c",
+      "/sw-register.f0e2abd2d9855fd73de5.bundle.js": "2618679249bee7ff39376c04b44050f3a3c59bf3",
+      "/vendor.b19088d63ac3cd421674.bundle.js": "4e927f832998b98e1dfcb1b4cd86b80f71ade8df",
+      "/inline.71237de55ab1144d01f7.bundle.js": "370339b8f9617f48afad05fcc3e700ec682a5958",
+      "/styles.83f36e53805c3afca12a.bundle.css": "5e27c34af99207da88ef2e949a3e7140dd4e7337",
       "/assets/img/.DS_Store": "36c1fa6af0d6f5a4ce65065511d815ecba53f442",
       "/assets/img/apple-appstore-badge.png": "167dfed593d847769692e5ee0358795a0acee74c",
       "/assets/img/google-playstore-badge.png": "e3922d9e82031b09924307816e8089fae4c1892f",
@@ -38,7 +38,7 @@
       "/angular2-tv-tracker/index.html": "866ab9d92c206c7de2340fb5eeab212d86d51376",
       "/react-imgur/index.html": "5ee9c72474b96915ba49ae8cda813054998a22e0",
       "/CNAME": "190303b55173d8d0044530cb21d5968ba12a4c22",
-      "/index.html": "51da1f4a10920cd5b591215449230a61eb9b013b"
+      "/index.html": "f4b9f682a726d4bda78eb5640619db58f09bfa45"
     },
     "_generatedFromWebpack": true
   }
