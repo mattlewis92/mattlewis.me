@@ -2,9 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 import { API_ENDPOINT } from '../constants';
+import { catchError } from 'rxjs/operators/catchError';
 
 export interface TweetUser {
   id_str: string;
@@ -38,10 +37,10 @@ export class TweetsComponent implements OnInit {
   constructor(private http: HttpClient, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
 
   ngOnInit() {
-    this.tweets$ = this.http.get<Tweet[]>(`${this.apiEndpoint}/social/tweets`).catch((err: HttpErrorResponse) => {
+    this.tweets$ = this.http.get<Tweet[]>(`${this.apiEndpoint}/social/tweets`).pipe(catchError((err: HttpErrorResponse) => {
       this.tweetLoadError = true;
       return of(err);
-    });
+    }));
   }
 
 }

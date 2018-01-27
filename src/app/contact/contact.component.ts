@@ -1,9 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/finally';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/take';
+import { finalize } from 'rxjs/operators/finalize';
 import { API_ENDPOINT } from '../constants';
 
 @Component({
@@ -33,9 +30,9 @@ export class ContactComponent {
   sendEmail() {
     this.loading = true;
 
-    this.http.post(`${this.apiEndpoint}/contact`, this.form).finally(() => {
+    this.http.post(`${this.apiEndpoint}/contact`, this.form).pipe(finalize(() => {
       this.loading = false;
-    }).subscribe(() => {
+    })).subscribe(() => {
       this.emailSent = true;
     }, (err: HttpErrorResponse) => {
       this.error = err.error;
