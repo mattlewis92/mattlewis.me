@@ -16,7 +16,7 @@ export class ScrollSpyDirective implements AfterViewInit {
 
   @Input('mwlScrollSpy') elementId: string; // tslint:disable-line
 
-  constructor(@Inject(DOCUMENT) private document: any, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(DOCUMENT) private document: any, @Inject(PLATFORM_ID) private platformId: object) {}
 
   ngAfterViewInit(): void {
     setTimeout(() => this.onScroll());

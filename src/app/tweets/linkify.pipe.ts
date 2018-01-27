@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import linkify from 'linkifyjs/lib/linkify-string';
 
 @Pipe({
-  name: 'linkify'
+  name: 'mwlLinkify'
 })
 export class LinkifyPipe implements PipeTransform {
 
