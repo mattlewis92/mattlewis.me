@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap/collapse/collapse.module';
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip/tooltip.module';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { API_ENDPOINT } from './constants';
@@ -44,8 +44,8 @@ import { environment } from '../environments/environment';
     }),
     FormsModule,
     HttpClientModule,
-    NgbCollapseModule.forRoot(),
-    NgbTooltipModule.forRoot(),
+    CollapseModule.forRoot(),
+    TooltipModule.forRoot(),
     NgxPageScrollModule
   ],
   bootstrap: [
