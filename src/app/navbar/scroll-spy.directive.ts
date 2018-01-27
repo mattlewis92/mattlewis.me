@@ -1,7 +1,7 @@
 import { Directive, HostListener, Input, AfterViewInit, Inject, HostBinding, PLATFORM_ID } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
-import { PageScrollConfig } from 'ng2-page-scroll';
+import { PageScrollConfig } from 'ngx-page-scroll';
 
 function adjustPosition(yCoord: number): number {
   return Math.floor(yCoord) - PageScrollConfig.defaultScrollOffset;
