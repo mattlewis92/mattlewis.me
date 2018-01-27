@@ -18,6 +18,8 @@ import { LinkifyPipe } from './tweets/linkify.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { TrustAsResourceUrlPipe } from './open-source/trust-as-resource-url.pipe';
 import { ScrollSpyDirective } from './navbar/scroll-spy.directive';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,9 @@ import { ScrollSpyDirective } from './navbar/scroll-spy.directive';
   imports: [
     BrowserModule.withServerTransition({
       appId: 'mwl-homepage'
+    }),
+    ServiceWorkerModule.register('/ngsw-worker.js', {
+      enabled: environment.production
     }),
     FormsModule,
     HttpClientModule,
