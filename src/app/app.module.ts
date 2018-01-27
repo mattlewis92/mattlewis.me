@@ -20,6 +20,7 @@ import { TrustAsResourceUrlPipe } from './open-source/trust-as-resource-url.pipe
 import { ScrollSpyDirective } from './navbar/scroll-spy.directive';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HireMeComponent } from './hire-me/hire-me.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { environment } from '../environments/environment';
     OpenSourceComponent,
     MobileAppsComponent,
     ContactComponent,
+    HireMeComponent,
     TweetsComponent,
     LinkifyPipe,
     FooterComponent,
