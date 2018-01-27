@@ -9,7 +9,6 @@ PageScrollConfig.defaultScrollOffset = 60;
   templateUrl: './navbar.component.html'
 })
 export class NavbarComponent {
-
   isMenuVisible = false;
 
   closeMenu(): void {
@@ -23,5 +22,4 @@ export class NavbarComponent {
       'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'
     );
   }
-
 }

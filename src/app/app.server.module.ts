@@ -6,12 +6,7 @@ import { AppModule } from './app.module';
 enableProdMode();
 
 @NgModule({
-  imports: [
-    AppModule,
-    ServerModule
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+  imports: [AppModule, ServerModule],
+  bootstrap: [AppComponent]
 })
 export class AppServerModule {}

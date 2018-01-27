@@ -7,7 +7,5 @@ const YEAR_STARTED_PROGRAMMING = 2008;
   templateUrl: './about.component.html'
 })
 export class AboutComponent {
-
   yearsExperience: number = new Date().getFullYear() - YEAR_STARTED_PROGRAMMING;
-
 }

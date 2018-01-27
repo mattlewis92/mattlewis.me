@@ -8,7 +8,6 @@ import { API_ENDPOINT } from '../constants';
   templateUrl: './contact.component.html'
 })
 export class ContactComponent {
-
   contactForm: any;
 
   emailSent = false;
@@ -25,18 +24,28 @@ export class ContactComponent {
     message: string;
   };
 
-  constructor(private http: HttpClient, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
+  constructor(
+    private http: HttpClient,
+    @Inject(API_ENDPOINT) private apiEndpoint: string
+  ) {}
 
   sendEmail() {
     this.loading = true;
 
-    this.http.post(`${this.apiEndpoint}/contact`, this.form).pipe(finalize(() => {
-      this.loading = false;
-    })).subscribe(() => {
-      this.emailSent = true;
-    }, (err: HttpErrorResponse) => {
-      this.error = err.error;
-    });
+    this.http
+      .post(`${this.apiEndpoint}/contact`, this.form)
+      .pipe(
+        finalize(() => {
+          this.loading = false;
+        })
+      )
+      .subscribe(
+        () => {
+          this.emailSent = true;
+        },
+        (err: HttpErrorResponse) => {
+          this.error = err.error;
+        }
+      );
   }
-
 }

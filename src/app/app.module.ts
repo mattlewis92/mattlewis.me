@@ -48,11 +48,7 @@ import { environment } from '../environments/environment';
     TooltipModule.forRoot(),
     NgxPageScrollModule
   ],
-  bootstrap: [
-    AppComponent
-  ],
-  providers: [
-    {provide: API_ENDPOINT, useValue: 'https://api.mattlewis.me'}
-  ]
+  bootstrap: [AppComponent],
+  providers: [{ provide: API_ENDPOINT, useValue: 'https://api.mattlewis.me' }]
 })
-export class AppModule { }
+export class AppModule {}

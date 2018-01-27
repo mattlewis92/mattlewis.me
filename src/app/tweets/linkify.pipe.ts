@@ -5,9 +5,7 @@ import linkify from 'linkifyjs/lib/linkify-string';
   name: 'mwlLinkify'
 })
 export class LinkifyPipe implements PipeTransform {
-
   transform(value: string | undefined, opts?: any): string {
     return linkify(value, opts);
   }
-
 }

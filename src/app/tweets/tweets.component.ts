@@ -19,7 +19,7 @@ export interface Tweet {
   retweeted_status: {
     id_str: string;
     full_text: string;
-    user: TweetUser
+    user: TweetUser;
   };
   user: TweetUser;
 }
@@ -29,18 +29,23 @@ export interface Tweet {
   templateUrl: './tweets.component.html'
 })
 export class TweetsComponent implements OnInit {
-
   tweetLoadError = false;
 
   tweets$: Observable<HttpErrorResponse | Tweet[]>;
 
-  constructor(private http: HttpClient, @Inject(API_ENDPOINT) private apiEndpoint: string) {}
+  constructor(
+    private http: HttpClient,
+    @Inject(API_ENDPOINT) private apiEndpoint: string
+  ) {}
 
   ngOnInit() {
-    this.tweets$ = this.http.get<Tweet[]>(`${this.apiEndpoint}/social/tweets`).pipe(catchError((err: HttpErrorResponse) => {
-      this.tweetLoadError = true;
-      return of(err);
-    }));
+    this.tweets$ = this.http
+      .get<Tweet[]>(`${this.apiEndpoint}/social/tweets`)
+      .pipe(
+        catchError((err: HttpErrorResponse) => {
+          this.tweetLoadError = true;
+          return of(err);
+        })
+      );
   }
-
 }

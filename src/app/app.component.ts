@@ -6,15 +6,13 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      System.import('fastclick').then(fastclick => {
+      System.import('fastclick').then((fastclick) => {
         fastclick.attach(document.body);
       });
     }
   }
-
 }
