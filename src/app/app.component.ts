@@ -22,17 +22,19 @@ export class AppComponent implements OnInit {
       System.import('fastclick').then((fastclick) => {
         fastclick.attach(document.body);
       });
+    }
+  }
 
+  scrollToSection() {
+    if (isPlatformBrowser(this.platformId)) {
       const params = new URLSearchParams(window.location.search);
       if (params.has('section')) {
-        setTimeout(() => {
-          this.pageScrollService.start(
-            PageScrollInstance.simpleInstance(
-              this.document,
-              `#${params.get('section')}`
-            )
-          );
-        }, 2000);
+        this.pageScrollService.start(
+          PageScrollInstance.simpleInstance(
+            this.document,
+            `#${params.get('section')}`
+          )
+        );
       }
     }
   }

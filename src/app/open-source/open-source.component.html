@@ -17,6 +17,7 @@
                 rel="noopener">
                 <img
                   [src]="('https://img.shields.io/github/stars/mattlewis92/' + repo.name + '.svg?style=flat-square') | mwlTrustAsResourceUrl"
+                  (load)="imgLoaded.next()"
                   alt="NPM downloads">
               </a>
               <a
@@ -24,6 +25,7 @@
                 target="_blank"
                 rel="noopener">
                 <img
+                  (load)="imgLoaded.next()"
                   [src]="('https://img.shields.io/npm/dm/' + repo.name + '.svg?style=flat-square') | mwlTrustAsResourceUrl"
                   alt="Github stars">
               </a>
