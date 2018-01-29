@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
               `#${params.get('section')}`
             )
           );
-        }, 1500);
+        }, 2500);
       }
     }
   }
