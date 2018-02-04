@@ -18,6 +18,11 @@
             <i class="fa fa-info-circle fa-lg fa-fw"></i> About me
           </a>
         </li>
+        <li mwlscrollspy="hire-me">
+          <a href="#hire-me" pagescroll="">
+            <i class="fa fa-briefcase fa-lg fa-fw"></i> Hire me
+          </a>
+        </li>
         <li mwlscrollspy="opensource">
           <a href="#opensource" pagescroll="">
             <i class="fa fa-code fa-lg fa-fw"></i> Open source
@@ -26,11 +31,6 @@
         <li mwlscrollspy="mobileapps">
           <a href="#mobileapps" pagescroll="">
             <i class="fa fa-mobile fa-lg fa-fw"></i> Mobile apps
-          </a>
-        </li>
-        <li mwlscrollspy="hire-me">
-          <a href="#hire-me" pagescroll="">
-            <i class="fa fa-briefcase fa-lg fa-fw"></i> Hire me
           </a>
         </li>
         <li mwlscrollspy="tweets">
@@ -82,7 +82,80 @@
   </div>
 </section>
 </mwl-about>
-<mwl-open-source _nghost-c0=""><section _ngcontent-c0="" id="opensource">
+<mwl-hire-me><section id="hire-me">
+  <div class="container ng-untouched ng-pristine ng-invalid" ngform="">
+    <h2><i class="fa fa-briefcase"></i> Hire me</h2>
+    <!----><div>
+      <p>
+        I am a highly experienced Javascript / Typescript developer, with an efficient work ethic, available for short to medium term remote contracting work.
+      </p>
+
+      <p>
+        Things I can help you with:
+      </p>
+      <ul>
+        <li>I can help with anything angular / angularjs related, including, but not limited to: component design and implementation, migration strategies from angularjs to angular, high level architectural planning and performance optimisations. I have been using angularjs since version 1.0 was released in 2012.</li>
+        <li>I am extremely proficient at building mobile apps with the ionic framework, and have shipped full blown apps from concept to production in just a few months.</li>
+        <li>I have a very deep knowledge of build tooling, especially webpack, and have frequently contributed back to its ecosystem of plugins and loaders. I can fine tune configuration to optimise build times, reduce bundle sizes to as small as possible, and demystify the inner workings to members of your team.</li>
+        <li>I have lots of experience configuring CI systems to automatically run tests on every build, and automatically deploy to beta and production environments.</li>
+        <li>I am a firm believer in writing robust and maintainable code. All of the code I write follows industry best practises, and is well tested.</li>
+        <li>I am extremely well versed in the Javascript language as a whole, aware of all of its strengths and weaknesses, and am up to date with using the latest esnext features. Consequently, I am very comfortable working on projects outside of the angular framework, such as in node or react.</li>
+        <li>Finally, I am very comfortable working to tight time scales by leading and managing teams to get a project over the line to completion. On the flip side, I am also very happy to work independently, or with a team, for someone else with a "no-ego" attitude.</li>
+      </ul>
+      <p>
+        For examples of the quality and quantity of my work, please checkout the numerous projects on <a href="https://github.com/mattlewis92?tab=repositories" target="_blank">my Github account</a>.
+      </p>
+      <!---->
+      <div class="row spacer-top">
+        <div class="col-md-6">
+          <label for="name" hidden="">Your name</label>
+          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="name" name="name" placeholder="Your name" required="" type="text" value="">
+          <br>
+        </div>
+        <div class="col-md-6">
+          <label for="email" hidden="">Your email address</label>
+          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="email" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Your email address" required="" type="email" value="">
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="name" hidden="">Company website</label>
+          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="companyWebsite" name="companyWebsite" placeholder="Company website" required="" type="text" value="">
+          <br>
+        </div>
+        <div class="col-md-4">
+          <label for="contractLength" hidden="">Contract duration</label>
+          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="contractLength" name="contractLength" placeholder="Contract duration" required="" type="text" value="">
+          <br>
+        </div>
+        <div class="col-md-4">
+          <label for="hourlyRate" hidden="">Proposed hourly rate (USD)</label>
+          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="hourlyRate" name="hourlyRate" placeholder="Proposed hourly rate (USD)" required="" type="text" value="">
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="description" hidden="">Please tell me a bit about the project and what you would require from me</label>
+          <textarea class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="description" name="description" placeholder="Please tell me a bit about the project and what you would require from me" required="" rows="5" value="">          </textarea>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <button class="btn btn-success btn-block btn-lg" type="button" disabled="">
+            <!----> Send
+          </button>
+        </div>
+      </div>
+      <br>
+    </div>
+    <!---->
+  </div>
+</section>
+</mwl-hire-me>
+<mwl-open-source _nghost-c0=""><section _ngcontent-c0="" class="bg-success" id="opensource">
   <div _ngcontent-c0="" class="container">
     <h2 _ngcontent-c0=""><i _ngcontent-c0="" class="fa fa-code"></i> Open source</h2>
     <p _ngcontent-c0="">I contribute regularly to the open source community and strive to give back in whatever way I can.</p>
@@ -224,7 +297,7 @@
   </div>
 </section>
 </mwl-open-source>
-<mwl-mobile-apps><section class="bg-success" id="mobileapps">
+<mwl-mobile-apps><section id="mobileapps">
   <div class="container">
     <h2><i class="fa fa-mobile"></i> Mobile apps</h2>
     <p>A couple of the most recent apps I've built using the awesome <a class="text-primary" href="https://ionicframework.com/" rel="noopener" target="_blank"><strong>Ionic framework</strong></a>.</p>
@@ -293,79 +366,8 @@
       </div>
     </div>
   </div>
-</section></mwl-mobile-apps>
-<mwl-hire-me><section id="hire-me">
-  <div class="container ng-untouched ng-pristine ng-invalid" ngform="">
-    <h2><i class="fa fa-briefcase"></i> Hire me</h2>
-    <!----><div>
-      <p>
-        I am a highly experienced Javascript / Typescript developer, with an efficient work ethic, available for short to medium term remote contracting work.
-      </p>
-
-      <p>
-        Things I can help you with:
-      </p>
-      <ul>
-        <li>I can help with anything angular / angularjs related, including, but not limited to: migration strategies from angularjs to angular, high level architectural planning and performance optimisations. I have been using angularjs since version 1.0 was released in 2012.</li>
-        <li>I am extremely proficient at building mobile apps with the ionic framework, and have shipped full blown apps from concept to production in just a few months.</li>
-        <li>I have a very deep knowledge of build tooling, especially webpack, and have frequently contributed back to its ecosystem of plugins and loaders. I can fine tune configuration to optimise build times, reduce bundle sizes to as small as possible, and demystify the inner workings to members of your team.</li>
-        <li>I have lots of experience configuring CI systems to automatically run tests on every build, and automatically deploy to beta and production environments.</li>
-        <li>I am a firm believer in writing robust and maintainable code. All of the code I write follows industry best practises, and is well tested.</li>
-        <li>I am extremely well versed in the Javascript language as a whole, aware of all of its strengths and weaknesses, and am up to date with using the latest esnext features. Consequently, I am very comfortable working on projects outside of the angular framework, such as in node or react.</li>
-      </ul>
-      <p>
-        Finally, I am very comfortable working to tight time scales by leading and managing teams to get a project over the line to completion. On the flip side, I am also very happy to work independently, or with a team, for someone else with a "no-ego" attitude. I work remotely covering various time zones (initially GMT+7)
-      </p>
-      <!---->
-      <div class="row spacer-top">
-        <div class="col-md-6">
-          <label for="name" hidden="">Your name</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="name" name="name" placeholder="Your name" required="" type="text" value="">
-          <br>
-        </div>
-        <div class="col-md-6">
-          <label for="email" hidden="">Your email address</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="email" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Your email address" required="" type="email" value="">
-          <br>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <label for="name" hidden="">Company website</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="companyWebsite" name="companyWebsite" placeholder="Company website" required="" type="text" value="">
-          <br>
-        </div>
-        <div class="col-md-4">
-          <label for="contractLength" hidden="">Contract length (in months)</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="contractLength" name="contractLength" placeholder="Contract length (in months)" required="" type="text" value="">
-          <br>
-        </div>
-        <div class="col-md-4">
-          <label for="hourlyRate" hidden="">Hourly rate (USD)</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="hourlyRate" name="hourlyRate" placeholder="Hourly rate (USD)" required="" type="text" value="">
-          <br>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <label for="description" hidden="">Please tell me a bit about the project and what you would require from me</label>
-          <textarea class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="description" name="description" placeholder="Please tell me a bit about the project and what you would require from me" required="" rows="5" value="">          </textarea>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <button class="btn btn-success btn-block btn-lg" type="button" disabled="">
-            <!----> Send
-          </button>
-        </div>
-      </div>
-      <br>
-    </div>
-    <!---->
-  </div>
 </section>
-</mwl-hire-me>
+</mwl-mobile-apps>
 <mwl-tweets><section class="bg-success" id="tweets">
   <div class="container">
     <h2><i class="fa fa-twitter"></i> Latest Tweets</h2>
@@ -374,7 +376,30 @@
     <!---->
 
     <!----><div class="list-group">
-      <!----><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/mattlewis92_/status/956591830451343360">
+      <!----><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/TheLarkInn/status/960065183497404416">
+        <div class="media">
+          <div class="media-left">
+            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/923008231689003008/ChLxnzy9_normal.jpg">
+          </div>
+          <div class="media-body">
+            <h4 class="list-group-item-heading">
+              Sean Thomas Larkin
+              <small class="pull-right">Feb 4</small>
+              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
+                @TheLarkInn
+              </small>
+            </h4>
+            <p class="list-group-item-text">
+              <!----><i class="fa fa-retweet" tooltip="This was retweeted by Matt"></i><!---->
+              <span innerhtml="Are you looking to upgrade your plugins and loaders to #webpack 4? Take a look at our overview guide! There may or may not be a lil teaser video from #webpackAcademy on there too now! <br>&amp;#10;<br>&amp;#10;<a href=&quot;https://t.co/8sl054amlV&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/8sl054amlV</a><br>&amp;#10;<br>&amp;#10;Thanks @wSokra for the writeup!!!!! More to be documented soon!">Are you looking to upgrade your plugins and loaders to #webpack 4? Take a look at our overview guide! There may or may not be a lil teaser video from #webpackAcademy on there too now! <br>
+<br>
+<a href="https://t.co/8sl054amlV" class="linkified" target="_blank" rel="noopener">https://t.co/8sl054amlV</a><br>
+<br>
+Thanks @wSokra for the writeup!!!!! More to be documented soon!</span>
+            </p>
+          </div>
+        </div>
+      </a><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/mattlewis92_/status/956591830451343360">
         <div class="media">
           <div class="media-left">
             <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/828602972158455812/h4ymBnK7_normal.jpg">
@@ -609,48 +634,6 @@ RT! <a href="https://t.co/NTOV4U909n" class="linkified" target="_blank" rel="noo
             </p>
           </div>
         </div>
-      </a><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/addyosmani/status/944838976162189313">
-        <div class="media">
-          <div class="media-left">
-            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/944484726739312640/LaUJrclA_normal.jpg">
-          </div>
-          <div class="media-body">
-            <h4 class="list-group-item-heading">
-              Addy Osmani
-              <small class="pull-right">Dec 24</small>
-              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                @addyosmani
-              </small>
-            </h4>
-            <p class="list-group-item-text">
-              <!----><i class="fa fa-retweet" tooltip="This was retweeted by Matt"></i><!---->
-              <span innerhtml="New blog post: Performance lessons from Tinder's Progressive Web App <a href=&quot;https://t.co/z3AUggKTNi&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/z3AUggKTNi</a> ~ built with React 16, Redux, webpack 3<br>&amp;#10;<br>&amp;#10;&amp;#9986;&amp;#65039; JavaScript optimizations (code-splitting &amp;amp;amp; preloading)<br>&amp;#10;&amp;#128241; Service Workers for network resilience<br>&amp;#10;&amp;#8987;&amp;#65039; Performance budgets &amp;amp;amp; more">New blog post: Performance lessons from Tinder's Progressive Web App <a href="https://t.co/z3AUggKTNi" class="linkified" target="_blank" rel="noopener">https://t.co/z3AUggKTNi</a> ~ built with React 16, Redux, webpack 3<br>
-<br>
-✂️ JavaScript optimizations (code-splitting &amp;amp; preloading)<br>
-📱 Service Workers for network resilience<br>
-⌛️ Performance budgets &amp;amp; more</span>
-            </p>
-          </div>
-        </div>
-      </a><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/mattlewis92_/status/944681772738072577">
-        <div class="media">
-          <div class="media-left">
-            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/828602972158455812/h4ymBnK7_normal.jpg">
-          </div>
-          <div class="media-body">
-            <h4 class="list-group-item-heading">
-              Matt Lewis
-              <small class="pull-right">Dec 23</small>
-              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                @mattlewis92_
-              </small>
-            </h4>
-            <p class="list-group-item-text">
-              <!---->
-              <span innerhtml="Thanks @davidh_23 for ng-packagr, am just starting to use it across all my angular projects and it works an absolute treat! &amp;#128076;">Thanks @davidh_23 for ng-packagr, am just starting to use it across all my angular projects and it works an absolute treat! 👌</span>
-            </p>
-          </div>
-        </div>
       </a>
       <a class="list-group-item text-center" href="https://twitter.com/mattlewis92_" rel="noopener" target="_blank">
         <h4 class="list-group-item-heading spacer-top">View all on Twitter <i class="fa fa-external-link"></i></h4>
@@ -669,4 +652,4 @@ RT! <a href="https://t.co/NTOV4U909n" class="linkified" target="_blank" rel="noo
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-63367573-1', 'auto');
-      ga('send', 'pageview');</script><script type="text/javascript" src="inline.b7ab363c8e8ea9645ffb.bundle.js"></script><script type="text/javascript" src="polyfills.099abe986498f3739b8b.bundle.js"></script><script type="text/javascript" src="main.7b2f799440b4eb700aeb.bundle.js"></script></body></html>
+      ga('send', 'pageview');</script><script type="text/javascript" src="inline.f5de90ad31750a284185.bundle.js"></script><script type="text/javascript" src="polyfills.099abe986498f3739b8b.bundle.js"></script><script type="text/javascript" src="main.e2377c46ac169d7c29d4.bundle.js"></script></body></html>
