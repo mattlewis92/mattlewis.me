@@ -1,4 +1,4 @@
-<section id="opensource">
+<section id="opensource" class="bg-success">
   <div class="container">
     <h2><i class="fa fa-code"></i> Open source</h2>
     <p>I contribute regularly to the open source community and strive to give back in whatever way I can.</p>
@@ -17,7 +17,6 @@
                 rel="noopener">
                 <img
                   [src]="('https://img.shields.io/github/stars/mattlewis92/' + repo.name + '.svg?style=flat-square') | mwlTrustAsResourceUrl"
-                  (load)="imgLoaded.next()"
                   alt="NPM downloads">
               </a>
               <a
@@ -25,7 +24,6 @@
                 target="_blank"
                 rel="noopener">
                 <img
-                  (load)="imgLoaded.next()"
                   [src]="('https://img.shields.io/npm/dm/' + repo.name + '.svg?style=flat-square') | mwlTrustAsResourceUrl"
                   alt="Github stars">
               </a>
