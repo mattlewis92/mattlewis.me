@@ -60,7 +60,7 @@
       </div>
       <div class="row">
         <div
-          class="col-md-4"
+          class="col-md-6"
           [ngClass]="{'has-error': !companyWebsiteInput.valid && companyWebsiteInput.dirty}">
           <label for="name" [hidden]="true">Company website</label>
           <input
@@ -75,33 +75,17 @@
           <br>
         </div>
         <div
-          class="col-md-4"
+          class="col-md-6"
           [ngClass]="{'has-error': !contractLengthInput.valid && contractLengthInput.dirty}">
-          <label for="contractLength" [hidden]="true">Contract duration</label>
+          <label for="contractLength" [hidden]="true">Contract duration (optional)</label>
           <input
             id="contractLength"
             type="text"
             name="contractLength"
             class="form-control input-lg"
-            placeholder="Contract duration"
-            required
+            placeholder="Contract duration (optional)"
             #contractLengthInput="ngModel"
             [(ngModel)]="form.contractLength">
-          <br>
-        </div>
-        <div
-          class="col-md-4"
-          [ngClass]="{'has-error': !hourlyRateInput.valid && hourlyRateInput.dirty}">
-          <label for="hourlyRate" [hidden]="true">Proposed hourly rate (USD)</label>
-          <input
-            id="hourlyRate"
-            type="text"
-            name="hourlyRate"
-            class="form-control input-lg"
-            placeholder="Proposed hourly rate (USD)"
-            required
-            #hourlyRateInput="ngModel"
-            [(ngModel)]="form.hourlyRate">
           <br>
         </div>
       </div>

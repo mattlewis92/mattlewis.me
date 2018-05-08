@@ -19,7 +19,6 @@ export class HireMeComponent {
     email: '',
     companyWebsite: '',
     contractLength: '',
-    hourlyRate: '',
     description: ''
   };
 
@@ -41,8 +40,6 @@ Name: ${this.form.name}
 Company website: ${this.form.companyWebsite},
       
 Contract length: ${this.form.contractLength}
-      
-Hourly rate: ${this.form.hourlyRate}
       
 About the project:
 ${this.form.description}
