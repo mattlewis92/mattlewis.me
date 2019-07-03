@@ -11,9 +11,11 @@
     "lint": "ng lint",
     "pre-render": "npm run build:server && node -r @std/esm ./src/pre-render",
     "predeploy": "npm test",
-    "deploy": "npm run build:browser && rm -rf docs && mv dist/browser docs && npm run pre-render && git add docs && git commit -m \"Build docs site\" && git push",
+    "deploy": "npm run build:browser && rm -rf docs && mv dist/browser docs && npm run pre-render && npm run blog:build && git add docs && git commit -m \"Build docs site\" && git push",
     "prettier": "prettier --write",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "blog:dev": "npm --prefix blog run start",
+    "blog:build": "npm --prefix blog run build"
   },
   "private": true,
   "repository": {
