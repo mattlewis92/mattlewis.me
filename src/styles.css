@@ -17,3 +17,7 @@ footer {
 .spacer-top {
   margin-top: 5px;
 }
+
+.bg-success a {
+  color: #2c3e50;
+}
