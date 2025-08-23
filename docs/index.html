@@ -1,8 +1,8 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Matt Lewis Homepage</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Matt Lewis, a web developer based in Birmingham, UK"><meta name="keywords" content="London,United Kingdom,Web developer,Full Stack,Frontend,Javascript,Typescript,HTML5,CSS3,Angular2,Angular,Node.js"><meta name="author" content="Matt Lewis"><meta name="theme-color" content="#1a242f"><link rel="manifest" href="assets/manifest/manifest.json"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.7b81964cd56c0ec0339b.bundle.css" rel="stylesheet"><style ng-transition="mwl-homepage">@media only screen and (min-width: 1024px) {
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Matt Lewis Homepage</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Matt Lewis, a web developer based in Birmingham, UK"><meta name="keywords" content="London,United Kingdom,Web developer,Full Stack,Frontend,Javascript,Typescript,HTML5,CSS3,Angular2,Angular,Node.js"><meta name="author" content="Matt Lewis"><meta name="theme-color" content="#1a242f"><link rel="manifest" href="assets/manifest/manifest.json"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="styles.3b494a2ef3f7733347e0.bundle.css" rel="stylesheet"><style ng-transition="mwl-homepage">@media only screen and (min-width: 1024px) {
       .description[_ngcontent-c0] {
         height: 63px;
       }
-    }</style></head><body><mwl-homepage ng-version="5.2.2"><mwl-navbar><nav class="navbar navbar-default navbar-fixed-top">
+    }</style></head><body><mwl-homepage ng-version="5.2.11"><mwl-navbar><nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button">
@@ -18,24 +18,9 @@
             <i class="fa fa-info-circle fa-lg fa-fw"></i> About me
           </a>
         </li>
-        <li mwlscrollspy="hire-me">
-          <a href="#hire-me" pagescroll="">
-            <i class="fa fa-briefcase fa-lg fa-fw"></i> Hire me
-          </a>
-        </li>
         <li mwlscrollspy="opensource">
           <a href="#opensource" pagescroll="">
             <i class="fa fa-code fa-lg fa-fw"></i> Open source
-          </a>
-        </li>
-        <li mwlscrollspy="mobileapps">
-          <a href="#mobileapps" pagescroll="">
-            <i class="fa fa-mobile fa-lg fa-fw"></i> Mobile apps
-          </a>
-        </li>
-        <li mwlscrollspy="tweets">
-          <a href="#tweets" pagescroll="">
-            <i class="fa fa-twitter fa-lg fa-fw"></i> Tweets
           </a>
         </li>
       </ul>
@@ -65,93 +50,25 @@
   </div>
 </nav>
 </mwl-navbar>
-<mwl-about><section class="bg-success" id="about">
+<mwl-about><section id="about">
   <div class="container">
     <h2><i class="fa fa-info-circle"></i> About me</h2>
 
     <p>
-      I am a hard working and self motivated frontend engineer with 14 years experience, based in London, UK.
+      I am a frontend focused engineer with 17 years experience, based in the UK.
     </p>
 
     <p>
-      My key skills are in Typescript (Angular and Node.js), HTML, CSS, Ionic, webpack and Firebase. I also have a strong interest in UX.
+      I have many years of experience working with the Angular framework, and the last few years have specialised in building dev tools at scale for <a href="https://clickup.com/">ClickUp</a>.
     </p>
 
   </div>
 </section>
 </mwl-about>
-<mwl-hire-me><section id="hire-me">
-  <div class="container ng-untouched ng-pristine ng-invalid" ngform="">
-    <h2><i class="fa fa-briefcase"></i> Hire me</h2>
-    <!----><div>
-      <p>
-        I am a highly experienced Typescript developer, with an efficient work ethic, available for short to medium term remote contracting work.
-      </p>
-
-      <p>
-        Things I can help you with:
-      </p>
-      <ul>
-        <li>I can help with anything angular related, including, but not limited to: component design and implementation, migration strategies from angularjs to angular, high level architectural planning and performance optimisations. I have been using angularjs since version 1.0 was released in 2012.</li>
-        <li>I am extremely proficient at building mobile apps with the ionic framework, and have shipped full blown apps from concept to production in just a few months.</li>
-        <li>I have a very deep knowledge of build tooling, especially webpack, and have frequently contributed back to its ecosystem of plugins and loaders. I can fine tune configuration to optimise build times, reduce bundle sizes to as small as possible, and demystify the inner workings to members of your team.</li>
-        <li>I have lots of experience configuring CI systems to automatically run tests on every build, and automatically deploy to beta and production environments.</li>
-        <li>I am a firm believer in writing robust and maintainable code. All of the code I write follows industry best practises, and is well tested.</li>
-        <li>I am extremely well versed in the Javascript language as a whole, aware of all of its strengths and weaknesses, and am up to date with using the latest esnext features. Consequently, I am very comfortable working on projects outside of the angular framework, such as in node or react.</li>
-        <li>Finally, as a result of working for startups my entire career, I am very comfortable working to tight time scales by leading and managing teams to get a project over the line to completion. On the flip side, I am also very happy to work independently, or with a team, for someone else with a "no-ego" attitude.</li>
-      </ul>
-      <p>
-        For examples of the quality and quantity of my work, please checkout the numerous projects on <a href="https://github.com/mattlewis92?tab=repositories" target="_blank">my Github account</a>.
-      </p>
-      <!---->
-      <div class="row spacer-top">
-        <div class="col-md-6">
-          <label for="name" hidden="">Your name</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="name" name="name" placeholder="Your name" required="" type="text" value="">
-          <br>
-        </div>
-        <div class="col-md-6">
-          <label for="email" hidden="">Your email address</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="email" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Your email address" required="" type="email" value="">
-          <br>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <label for="name" hidden="">Company website</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="companyWebsite" name="companyWebsite" placeholder="Company website" required="" type="text" value="">
-          <br>
-        </div>
-        <div class="col-md-6">
-          <label for="contractLength" hidden="">Contract duration (optional)</label>
-          <input class="form-control input-lg ng-untouched ng-pristine ng-valid" id="contractLength" name="contractLength" placeholder="Contract duration (optional)" type="text" value="">
-          <br>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <label for="description" hidden="">Please tell me a bit about the project and what you would require from me</label>
-          <textarea class="form-control input-lg ng-untouched ng-pristine ng-invalid" id="description" name="description" placeholder="Please tell me a bit about the project and what you would require from me" required="" rows="5" value="">          </textarea>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-          <button class="btn btn-success btn-block btn-lg" type="button" disabled="">
-            <!----> Send
-          </button>
-        </div>
-      </div>
-      <br>
-    </div>
-    <!---->
-  </div>
-</section>
-</mwl-hire-me>
 <mwl-open-source _nghost-c0=""><section _ngcontent-c0="" class="bg-success" id="opensource">
   <div _ngcontent-c0="" class="container">
     <h2 _ngcontent-c0=""><i _ngcontent-c0="" class="fa fa-code"></i> Open source</h2>
-    <p _ngcontent-c0="">I contribute regularly to the open source community and strive to give back in whatever way I can.</p>
+    <p _ngcontent-c0="">Some examples of open source projects that I have created</p>
     <div _ngcontent-c0="" class="row">
       <!----><div _ngcontent-c0="" class="col-md-4">
         <div _ngcontent-c0="" class="panel panel-primary">
@@ -159,7 +76,7 @@
             <h3 _ngcontent-c0="" class="panel-title">angular-calendar</h3>
           </div>
           <div _ngcontent-c0="" class="panel-body">
-            <p _ngcontent-c0="" class="description">A flexible calendar component for angular 12.0+ that can display events on a month, week or day view.</p>
+            <p _ngcontent-c0="" class="description">A flexible calendar component for angular 15.0+ that can display events on a month, week or day view.</p>
             <div _ngcontent-c0="" class="text-center">
               <a _ngcontent-c0="" rel="noopener" target="_blank" href="https://github.com/mattlewis92/angular-calendar">
                 <img _ngcontent-c0="" alt="NPM downloads" src="https://img.shields.io/github/stars/mattlewis92/angular-calendar.svg?style=flat-square">
@@ -181,7 +98,7 @@
             <h3 _ngcontent-c0="" class="panel-title">angular-confirmation-popover</h3>
           </div>
           <div _ngcontent-c0="" class="panel-body">
-            <p _ngcontent-c0="" class="description">An angular 10.0+ bootstrap confirmation popover</p>
+            <p _ngcontent-c0="" class="description">An angular 15.0+ bootstrap confirmation popover</p>
             <div _ngcontent-c0="" class="text-center">
               <a _ngcontent-c0="" rel="noopener" target="_blank" href="https://github.com/mattlewis92/angular-confirmation-popover">
                 <img _ngcontent-c0="" alt="NPM downloads" src="https://img.shields.io/github/stars/mattlewis92/angular-confirmation-popover.svg?style=flat-square">
@@ -225,7 +142,7 @@
             <h3 _ngcontent-c0="" class="panel-title">angular-resizable-element</h3>
           </div>
           <div _ngcontent-c0="" class="panel-body">
-            <p _ngcontent-c0="" class="description">An angular 12.0+ directive that allows an element to be dragged and resized</p>
+            <p _ngcontent-c0="" class="description">An angular 20.0+ directive that allows an element to be dragged and resized</p>
             <div _ngcontent-c0="" class="text-center">
               <a _ngcontent-c0="" rel="noopener" target="_blank" href="https://github.com/mattlewis92/angular-resizable-element">
                 <img _ngcontent-c0="" alt="NPM downloads" src="https://img.shields.io/github/stars/mattlewis92/angular-resizable-element.svg?style=flat-square">
@@ -290,225 +207,13 @@
   </div>
 </section>
 </mwl-open-source>
-<mwl-mobile-apps><section id="mobileapps">
-  <div class="container">
-    <h2><i class="fa fa-mobile"></i> Mobile apps</h2>
-    <p>A couple of the most recent apps I've built using the awesome <a class="text-primary" href="https://ionicframework.com/" rel="noopener" target="_blank"><strong>Ionic framework</strong></a>.</p>
-
-    <div class="row">
-      <!----><div class="col-md-6">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">SocialSignIn</h3>
-          </div>
-          <div class="panel-body">
-            <div class="media">
-              <div class="media-left">
-                <img class="media-object" width="100" src="/assets/img/socialsignin.png" alt="SocialSignIn">
-              </div>
-              <div class="media-body">
-                <p>The SocialSignIn app allows you to schedule and manage posts for all your social networks as well as view your unified social inbox.</p>
-              </div>
-            </div>
-          </div>
-          <div class="panel-footer text-center">
-            <div class="row">
-              <div class="col-xs-6 col-sm-4 col-sm-offset-1">
-                <a rel="noopener" target="_blank" href="https://itunes.apple.com/gb/app/socialsignin/id564011085">
-                  <img alt="apple-app-store" class="img-responsive" src="../../assets/img/apple-appstore-badge.png">
-                </a>
-              </div>
-              <div class=" col-xs-6 col-sm-4 col-sm-offset-2">
-                <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=uk.co.socialsignin">
-                  <img alt="google-play-store" class="img-responsive" src="../../assets/img/google-playstore-badge.png">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div><div class="col-md-6">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">MiResource</h3>
-          </div>
-          <div class="panel-body">
-            <div class="media">
-              <div class="media-left">
-                <img class="media-object" width="100" src="/assets/img/miresource.png" alt="MiResource">
-              </div>
-              <div class="media-body">
-                <p>This is the official app for the Resource Event, taking place on 3-5 March 2015 at ExCel, London.</p>
-              </div>
-            </div>
-          </div>
-          <div class="panel-footer text-center">
-            <div class="row">
-              <div class="col-xs-6 col-sm-4 col-sm-offset-1">
-                <a rel="noopener" target="_blank" href="https://itunes.apple.com/us/app/id968397450">
-                  <img alt="apple-app-store" class="img-responsive" src="../../assets/img/apple-appstore-badge.png">
-                </a>
-              </div>
-              <div class=" col-xs-6 col-sm-4 col-sm-offset-2">
-                <a rel="noopener" target="_blank" href="https://play.google.com/store/apps/details?id=com.iwazat.miresource">
-                  <img alt="google-play-store" class="img-responsive" src="../../assets/img/google-playstore-badge.png">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</mwl-mobile-apps>
-<mwl-tweets><section class="bg-success" id="tweets">
-  <div class="container">
-    <h2><i class="fa fa-twitter"></i> Latest Tweets</h2>
-    <!---->
-
-    <!---->
-
-    <!----><div class="list-group">
-      <!----><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/mattlewis92_/status/1264188370017816577">
-        <div class="media">
-          <div class="media-left">
-            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/978964686120079363/IunhhQKC_normal.jpg">
-          </div>
-          <div class="media-body">
-            <h4 class="list-group-item-heading">
-              Matt Lewis
-              <small class="pull-right">May 23</small>
-              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                @mattlewis92_
-              </small>
-            </h4>
-            <p class="list-group-item-text">
-              <!---->
-              <span innerhtml="New angular-calendar release is incoming! &amp;#129395; Lots of nice new features and only 2 tiny breaking changes, please help me test it in your apps before I release it, you can see how to do that on the PR: <a href=&quot;https://t.co/3ABofLDLKe&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/3ABofLDLKe</a> <a href=&quot;https://t.co/ATloOj2RVL&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/ATloOj2RVL</a>">New angular-calendar release is incoming! 🥳 Lots of nice new features and only 2 tiny breaking changes, please help me test it in your apps before I release it, you can see how to do that on the PR: <a href="https://t.co/3ABofLDLKe" class="linkified" target="_blank" rel="noopener">https://t.co/3ABofLDLKe</a> <a href="https://t.co/ATloOj2RVL" class="linkified" target="_blank" rel="noopener">https://t.co/ATloOj2RVL</a></span>
-            </p>
-          </div>
-        </div>
-      </a><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/mattlewis92_/status/1254741837971099648">
-        <div class="media">
-          <div class="media-left">
-            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/978964686120079363/IunhhQKC_normal.jpg">
-          </div>
-          <div class="media-body">
-            <h4 class="list-group-item-heading">
-              Matt Lewis
-              <small class="pull-right">Apr 27</small>
-              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                @mattlewis92_
-              </small>
-            </h4>
-            <p class="list-group-item-text">
-              <!---->
-              <span innerhtml="Just setup a proper domain for angular-calendar and an email newsletter so that you can subscribe to updates about new features &amp;#129321; You can check it out here: <a href=&quot;https://t.co/Px6iX9W7WN&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/Px6iX9W7WN</a>">Just setup a proper domain for angular-calendar and an email newsletter so that you can subscribe to updates about new features 🤩 You can check it out here: <a href="https://t.co/Px6iX9W7WN" class="linkified" target="_blank" rel="noopener">https://t.co/Px6iX9W7WN</a></span>
-            </p>
-          </div>
-        </div>
-      </a><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/tobi/status/1210607693175676931">
-        <div class="media">
-          <div class="media-left">
-            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/1517442840971911170/CyQWesRG_normal.jpg">
-          </div>
-          <div class="media-body">
-            <h4 class="list-group-item-heading">
-              tobi lutke
-              <small class="pull-right">Dec 28</small>
-              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                @tobi
-              </small>
-            </h4>
-            <p class="list-group-item-text">
-              <!----><i class="fa fa-retweet" tooltip="This was retweeted by Matt"></i><!---->
-              <span innerhtml="I bet this won&amp;#8217;t make it on hacker news.  <a href=&quot;https://t.co/34nddcXdCW&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/34nddcXdCW</a>">I bet this won’t make it on hacker news.  <a href="https://t.co/34nddcXdCW" class="linkified" target="_blank" rel="noopener">https://t.co/34nddcXdCW</a></span>
-            </p>
-          </div>
-        </div>
-      </a><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/mattlewis92_/status/1208343809446297601">
-        <div class="media">
-          <div class="media-left">
-            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/978964686120079363/IunhhQKC_normal.jpg">
-          </div>
-          <div class="media-body">
-            <h4 class="list-group-item-heading">
-              Matt Lewis
-              <small class="pull-right">Dec 21</small>
-              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                @mattlewis92_
-              </small>
-            </h4>
-            <p class="list-group-item-text">
-              <!---->
-              <span innerhtml="Yes yes yes, I&amp;#8217;m so hyped for this! &amp;#128522; <a href=&quot;https://t.co/0eQb7y7Xom&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/0eQb7y7Xom</a>">Yes yes yes, I’m so hyped for this! 😊 <a href="https://t.co/0eQb7y7Xom" class="linkified" target="_blank" rel="noopener">https://t.co/0eQb7y7Xom</a></span>
-            </p>
-          </div>
-        </div>
-      </a><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/mattlewis92_/status/1195051840813092864">
-        <div class="media">
-          <div class="media-left">
-            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/978964686120079363/IunhhQKC_normal.jpg">
-          </div>
-          <div class="media-body">
-            <h4 class="list-group-item-heading">
-              Matt Lewis
-              <small class="pull-right">Nov 14</small>
-              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                @mattlewis92_
-              </small>
-            </h4>
-            <p class="list-group-item-text">
-              <!---->
-              <span innerhtml="I just released 0.28.0 of angular-calendar &amp;#129395; <br>&amp;#10;<br>&amp;#10;Major new features: @date_fns v2, a11y support and schematics<br>&amp;#10;<br>&amp;#10;A big thank you to @VolgisticsInc and @billyjov_ who did most of the hard work for this release &amp;#129303; <a href=&quot;https://t.co/Z6pIeruggT&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/Z6pIeruggT</a>">I just released 0.28.0 of angular-calendar 🥳 <br>
-<br>
-Major new features: @date_fns v2, a11y support and schematics<br>
-<br>
-A big thank you to @VolgisticsInc and @billyjov_ who did most of the hard work for this release 🤗 <a href="https://t.co/Z6pIeruggT" class="linkified" target="_blank" rel="noopener">https://t.co/Z6pIeruggT</a></span>
-            </p>
-          </div>
-        </div>
-      </a><a class="list-group-item" rel="noopener" target="_blank" href="https://twitter.com/mattlewis92_/status/1183314819816009728">
-        <div class="media">
-          <div class="media-left">
-            <img alt="Twitter avatar" class="img-rounded" src="https://pbs.twimg.com/profile_images/978964686120079363/IunhhQKC_normal.jpg">
-          </div>
-          <div class="media-body">
-            <h4 class="list-group-item-heading">
-              Matt Lewis
-              <small class="pull-right">Oct 13</small>
-              <small class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline spacer-top">
-                @mattlewis92_
-              </small>
-            </h4>
-            <p class="list-group-item-text">
-              <!---->
-              <span innerhtml="I'm now part of the GitHub sponsors program! &amp;#10024;<br>&amp;#10;<br>&amp;#10;If you're using any of my open source projects, please consider donating. Benefits include:<br>&amp;#10;<br>&amp;#10;&amp;#9201;Faster response times to GitHub issues<br>&amp;#10;&amp;#128274;Ask any support question <br>&amp;#10;&amp;#128104;&amp;#8205;&amp;#128187;Private consultation with your company<br>&amp;#10;<br>&amp;#10;<a href=&quot;https://t.co/Fgw9rdreFT&quot; class=&quot;linkified&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>https://t.co/Fgw9rdreFT</a>">I'm now part of the GitHub sponsors program! ✨<br>
-<br>
-If you're using any of my open source projects, please consider donating. Benefits include:<br>
-<br>
-⏱Faster response times to GitHub issues<br>
-🔒Ask any support question <br>
-👨‍💻Private consultation with your company<br>
-<br>
-<a href="https://t.co/Fgw9rdreFT" class="linkified" target="_blank" rel="noopener">https://t.co/Fgw9rdreFT</a></span>
-            </p>
-          </div>
-        </div>
-      </a>
-      <a class="list-group-item text-center" href="https://twitter.com/mattlewis92_" rel="noopener" target="_blank">
-        <h4 class="list-group-item-heading spacer-top">View all on Twitter <i class="fa fa-external-link"></i></h4>
-      </a>
-    </div>
-  </div>
-</section>
-</mwl-tweets>
 <mwl-footer><footer class="text-center">
-  Website source available <a href="https://github.com/mattlewis92/api.mattlewis.me" rel="noopener" target="_blank">here</a> and <a href="https://github.com/mattlewis92/mattlewis.me" rel="noopener" target="_blank">here</a> |
-  Powered by <a href="https://pages.github.com/" rel="noopener" target="_blank">GitHub pages</a>, <a href="https://heroku.com/" rel="noopener" target="_blank">Heroku</a> and <a href="https://www.cloudflare.com/" rel="noopener" target="_blank">Cloudflare</a>
-</footer></mwl-footer>
+  Website source available <a href="https://github.com/mattlewis92/api.mattlewis.me" rel="noopener" target="_blank">here</a> |
+  Powered by <a href="https://pages.github.com/" rel="noopener" target="_blank">GitHub pages</a> and <a href="https://www.cloudflare.com/" rel="noopener" target="_blank">Cloudflare</a>
+</footer>
+</mwl-footer>
 </mwl-homepage><script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LEN94PFETS"></script><script>window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-LEN94PFETS');</script><script type="text/javascript" src="inline.7d826f75ae93fac0d73a.bundle.js"></script><script type="text/javascript" src="polyfills.099abe986498f3739b8b.bundle.js"></script><script type="text/javascript" src="main.e8dac8d156bd55a88481.bundle.js"></script></body></html>
+      gtag('config', 'G-LEN94PFETS');</script><script type="text/javascript" src="inline.cf20e89bf2f3d0387351.bundle.js"></script><script type="text/javascript" src="polyfills.b05f4856ed2927a54922.bundle.js"></script><script type="text/javascript" src="main.f5397d0f3db196bdaae3.bundle.js"></script></body></html>
