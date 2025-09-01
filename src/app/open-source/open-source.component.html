@@ -3,7 +3,7 @@
     <h2><i class="fa fa-code"></i> Open source</h2>
     <p>Some examples of open source projects that I have created</p>
     <div class="row">
-      <div class="col-md-4" *ngFor="let repo of repos$ | async">
+      <div class="col-md-4" *ngFor="let repo of repos">
         <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">{{ repo.name }}</h3>
@@ -12,7 +12,7 @@
             <p class="description">{{ repo.description }}</p>
             <div class="text-center">
               <a
-                [href]="repo.html_url"
+                [href]="repo.url"
                 target="_blank"
                 rel="noopener">
                 <img
@@ -31,7 +31,7 @@
           </div>
           <div class="panel-footer text-center">
             <a
-              [href]="repo.html_url"
+              [href]="repo.url"
               target="_blank"
               rel="noopener"
               class="btn btn-sm btn-success">

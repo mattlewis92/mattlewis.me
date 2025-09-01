@@ -18,31 +18,49 @@ const REPOS_TO_DISPLAY: number[] = [
   templateUrl: './open-source.component.html',
   styles: [
     `
-    @media only screen and (min-width: 1024px) {
-      .description {
-        height: 63px;
+      @media only screen and (min-width: 1024px) {
+        .description {
+          height: 63px;
+        }
       }
-    }
-  `
+    `
   ]
 })
-export class OpenSourceComponent implements OnInit {
-  repos$: Observable<any[]>;
-
-  constructor(
-    private http: HttpClient,
-    @Inject(API_ENDPOINT) private apiEndpoint: string
-  ) {}
-
-  ngOnInit(): void {
-    this.repos$ = this.http
-      .get<any[]>(`${this.apiEndpoint}/social/github/repos`)
-      .pipe(
-        map((repos) => {
-          return REPOS_TO_DISPLAY.map((repoId) =>
-            repos.find((repo) => repo.id === repoId)
-          );
-        })
-      );
-  }
+export class OpenSourceComponent {
+  readonly repos = [
+    {
+      name: 'angular-calendar',
+      description:
+        'A flexible calendar component for angular that can display events on a month, week or day view.',
+      url: 'https://github.com/mattlewis92/angular-calendar'
+    },
+    {
+      name: 'angular-resizable-element',
+      description:
+        'An angular directive that allows an element to be dragged and resized',
+      url: 'https://github.com/mattlewis92/angular-resizable-element'
+    },
+    {
+      name: 'angular-confirmation-popover',
+      description: 'An angular bootstrap confirmation popover',
+      url: 'https://github.com/mattlewis92/angular-confirmation-popover'
+    },
+    {
+      name: 'karma-coverage-istanbul-reporter',
+      description:
+        'A karma reporter that uses the latest istanbul 1.x APIs to report coverage',
+      url: 'https://github.com/mattlewis92/ karma-coverage-istanbul-reporter'
+    },
+    {
+      name: 'webpack-retry-chunk-load-plugin',
+      description:
+        'A webpack plugin to retry loading of chunks that failed to load',
+      url: 'https://github.com/mattlewis92/webpack-retry-chunk-load-plugin'
+    },
+    {
+      name: 'angularx-flatpickr',
+      description: 'An angular wrapper for flatpickr',
+      url: 'https://github.com/mattlewis92/angularx-flatpickr'
+    }
+  ];
 }
